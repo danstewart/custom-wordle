@@ -88,9 +88,19 @@ const parseDuration = (duration) => {
     return timeout;
 };
 
+// Allows defining template literals with syntax highlighting
+const template = (strings, ...values) => {
+    return strings.reduce((acc, str, i) => {
+        return acc + str + (values[i] || '');
+    }, '');
+};
+
+
 export {
     pascalToKebab,
     kebabToCamel,
     permutations,
     parseDuration,
+    template as html,
+    template as css,
 };

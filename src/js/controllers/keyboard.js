@@ -5,16 +5,29 @@ class KeyboardView extends Controller {
         this.keyboardRows = [
             [ "Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P" ],
             [ "A", "S", "D", "F", "G", "H", "J", "K", "L" ],
-            [ "Z", "X", "C", "V", "B", "N", "M" ],
+            [ "↵", "Z", "X", "C", "V", "B", "N", "M", "←" ],
         ];
     }
 
     clickLetter(e) {
-        const letter = e.target.innerText;
-        console.log(`Clicked ${letter}`);
+        const grid = document.querySelector("#grid");
+        const letter = e.target.innerHTML;
+
+        // Enter
+        if (letter === "↵") {
+            grid.submitAnswer();
+
+        // Backspace
+        } else if (letter === "←") {
+            grid.removeLetter();
+
+        // Letter
+        } else {
+            grid.addLetter(letter)
+        }
     }
 
-    self() {
+    renderSelf() {
         const rows = this.keyboardRows.map(row => html`
             <div class="keyboard-row">
                 ${row.map(letter => html`
@@ -23,7 +36,8 @@ class KeyboardView extends Controller {
             </div>
         `);
 
-        return rows.join("");
+        this.self.innerHTML = rows.join("");
+        this.rebind();
     }
 }
 

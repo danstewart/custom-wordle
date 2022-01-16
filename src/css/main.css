@@ -2,6 +2,14 @@ body {
     margin-top: 50px;
 }
 
+#grid-error {
+    background-color: #fb6565;
+    color: white;
+    padding: 15px;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
 .grid-row {
     display: flex;
     flex-direction: row;

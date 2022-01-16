@@ -10,14 +10,20 @@ const makeController = (base=HTMLElement, extendTag=null) => {
     const CoreController = (class extends base {
         static __extendTag__ = extendTag;
 
-        constructor() {
+        constructor(args) {
             super();
-
+            
             // Store for internal data
             this.__internal__ = {};
 
             this.tag = this.tagName.toLowerCase();
             this.root = this;
+
+            // Handle <self> node
+            // By default an empty element will only contain it's `self` content
+            // Can also be added manually using <self></self>
+            if (this.innerHTML.trim() === "") this.innerHTML = "<self></self>";
+            this.self = this.querySelector("self");
 
             // Add the data-controller attribute to the element
             this.setAttribute("data-controller", this.tag);
@@ -49,7 +55,7 @@ const makeController = (base=HTMLElement, extendTag=null) => {
             }
 
             this.rebind();
-            this.init();
+            this.init(args);
 
             if (this.autoRender) {
                 const interval = parseDuration(this.autoRender);
@@ -57,15 +63,13 @@ const makeController = (base=HTMLElement, extendTag=null) => {
             }
         }
 
-        setStyle(cssText) {
-            this.style.cssText = cssText;
-        }
-
         /**
          * Re-initializes the controller instance
          * Useful when the DOM changes to manually refresh the controller state
          */
         rebind() {
+            // TODO: Would be good to bind a specific node/tree
+            // Would be useful for renderSelf to bind it's own content only
             this.#bindEvents();
             this.#bindArgs();
             this.#bindDataValues();
@@ -109,16 +113,22 @@ const makeController = (base=HTMLElement, extendTag=null) => {
         }
 
         /**
+         * Expected to be overridden if needed
+         * Should render the <self></self> element
+         * This is the built in template for the custom element
+         */
+        renderSelf() {}
+
+        /**
          * Re-renders everything with the @render attribute
          */
         render() {
             // TODO: Might be handy to be able to render one element or element tree
 
-            const self = this.querySelector("self");
-            if (self && this.self && typeof this.self === "function") {
-                self.innerHTML = this.self();
-                // TODO: Better way to do this?
-                this.rebind();
+            // Render self
+            // TODO: Better way to do this?
+            if (this.renderSelf && typeof this.renderSelf === 'function') {
+                this.renderSelf();
             }
 
             this.#findRenderableElements().forEach(el => {
@@ -164,8 +174,9 @@ const makeController = (base=HTMLElement, extendTag=null) => {
                         template = template.replace(replacer, pos.toString() || '');
                     }
                 });
-
-                el.innerText = template;
+                
+                // TODO: This may be innefecient
+                el.innerHTML = template;
             });
         }
 

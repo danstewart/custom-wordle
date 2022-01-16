@@ -9,11 +9,6 @@
 
         <title>Custom Wordle</title>
 
-        <!-- From https://favicon.io/ -->
-        <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
-
         <link rel="stylesheet" href="https://unpkg.com/chota@latest">
         <link rel="stylesheet" href="./css/main.css">
 
@@ -23,13 +18,8 @@
     <body>
         <div class="container">
             <h2>Custom Wordle</h2>
-            <grid-view length=8>
-                <self></self>
-            </grid-view>
-
-            <keyboard-view>
-                <self></self>
-            </keyboard-view>
+            <grid-view id="grid" length=8></grid-view>
+            <keyboard-view id="keyboard"></keyboard-view>
         </div>
     </body>
 </html>
