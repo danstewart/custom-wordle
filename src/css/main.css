@@ -32,6 +32,21 @@ body {
     font-weight: bold;
 }
 
+.grid-item.green {
+    background-color: green;
+    color: white;
+}
+
+.grid-item.orange {
+    background-color: orange;
+    color: white;
+}
+
+.grid-item.gray {
+    background-color: gray;
+    color: white;
+}
+
 .keyboard-row {
     display: flex;
     justify-content: center;

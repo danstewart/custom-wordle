@@ -5,6 +5,8 @@ class GridRow extends Controller {
         if (!this.length) this.length = length;
 
         this.letters = [];
+        this.state = [];
+
         this.render();
     }
 
@@ -15,9 +17,10 @@ class GridRow extends Controller {
 
         for (let i = 0; i < this.length; i++) {
             let letter = this.letters.length > i ? this.letters[i] : "";
+            let state = this.state.length > i ? this.state[i] : "";
 
             squares.push(html`
-                <div class="grid-item">
+                <div class="grid-item ${state}">
                     <div class="grid-item-letter">${letter}</div>
                 </div>
             `);
@@ -66,12 +69,30 @@ class GridView extends Controller {
     submitAnswer() {
         const row = this.rows.slice(-1).pop();
 
-        if (row.letters.length !== this.length) {
+        if (row.letters.length < this.length) {
             this.showError("Not enough letters!");
             return;
         }
 
-        // TODO: WIP
+        if (row.letters.join("") === this.targetWord) {
+            // TODO: Show success message
+            row.state = Array.from({ length: this.length }, () => "green");
+            row.render();
+            return;
+        }
+
+        for (let i = 0; i < this.length; i++) {
+            if (this.targetWord[i] === row.letters[i]) {
+                row.state[i] = "green";
+            } else if (this.targetWord.includes(row.letters[i])) {
+                // TODO: This logic should check for duplicates and ignore already green letters
+                row.state[i] = "orange";
+            } else {
+                row.state[i] = "gray";
+            }
+        }
+
+        this.addRow();
     }
 
     removeLetter() {
@@ -84,7 +105,7 @@ class GridView extends Controller {
     }
 
     addRow() {
-        this.rows.push(html`<grid-row length=${this.length}></grid-row>`);
+        this.rows.push(new GridRow({ length: this.length }));
         this.render();
     }
 
