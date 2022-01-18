@@ -36,9 +36,10 @@ class GridRow extends Controller {
 
 class GridView extends Controller {
     // TODO: Fix this to not jolt page on show/hide
-    static errorContainer = html`<div id="grid-error" class="is-hidden"></div>`;
+    static flashContainer = html`<div id="grid-flash" class="is-hidden"></div>`;
 
     init() {
+        this.activeRow = 0;
         this.targetWord = "GREETING";
 
         this.rows = [
@@ -53,12 +54,12 @@ class GridView extends Controller {
 
     renderSelf() {
         this.self.replaceChildren(...this.rows);
-        this.self.insertAdjacentHTML("afterbegin", GridView.errorContainer)
+        this.self.insertAdjacentHTML("afterbegin", GridView.flashContainer)
         this.rebind();
     }
 
     addLetter(letter) {
-        const row = this.rows.slice(-1).pop();
+        const row = this.rows[this.activeRow];
 
         if (row.letters.length < this.length) {
             row.letters.push(letter);
@@ -66,37 +67,8 @@ class GridView extends Controller {
         }
     }
 
-    submitAnswer() {
-        const row = this.rows.slice(-1).pop();
-
-        if (row.letters.length < this.length) {
-            this.showError("Not enough letters!");
-            return;
-        }
-
-        if (row.letters.join("") === this.targetWord) {
-            // TODO: Show success message
-            row.state = Array.from({ length: this.length }, () => "green");
-            row.render();
-            return;
-        }
-
-        for (let i = 0; i < this.length; i++) {
-            if (this.targetWord[i] === row.letters[i]) {
-                row.state[i] = "green";
-            } else if (this.targetWord.includes(row.letters[i])) {
-                // TODO: This logic should check for duplicates and ignore already green letters
-                row.state[i] = "orange";
-            } else {
-                row.state[i] = "gray";
-            }
-        }
-
-        this.addRow();
-    }
-
     removeLetter() {
-        const row = this.rows.slice(-1).pop();
+        const row = this.rows[this.activeRow];
 
         if (row.letters.length > 0) {
             row.letters.pop();
@@ -104,19 +76,75 @@ class GridView extends Controller {
         }
     }
 
+
+    submitAnswer() {
+        const row = this.rows[this.activeRow];
+
+        if (row.letters.length < this.length) {
+            this.showFlash("Not enough letters!", "error");
+            return;
+        }
+
+        if (row.letters.join("") === this.targetWord) {
+            this.showFlash("Good job!", "success", null);
+            row.state = Array.from({ length: this.length }, () => "green");
+            row.render();
+            return;
+        }
+
+        let states = [];
+        const submitted = Array.from(row.letters);
+        const expected = this.targetWord.split("");
+
+        // First find exact matches
+        for (let i = 0; i < this.length; i++) {
+            if (expected[i] === submitted[i]) {
+                states[i] = "green";
+                expected[i] = null;
+                submitted[i] = null;
+            }
+        }
+
+        // Then find partial matches (right letter, wrong position)
+        for (let i = 0; i < this.length; i++) {
+            if (!states[i] && submitted[i] && expected[i] && expected.includes(submitted[i])) {
+                states[i] = "orange";
+                expected[i] = null;
+                submitted[i] = null;
+            }
+        }
+
+        // Then the wrong ones
+        for (let i = 0; i < this.length; i++) {
+            if (!states[i]) states[i] = "gray";
+        }
+
+        console.log(states)
+
+        row.state = states;
+        this.activeRow++;
+        this.addRow();
+    }
+
     addRow() {
-        this.rows.push(new GridRow({ length: this.length }));
+        this.rows.push(
+            new GridRow({ length: this.length })
+        );
         this.render();
     }
 
-    showError(msg) {
-        const errContainer = document.querySelector("#grid-error");
+    showFlash(msg, type, timeout=3000) {
+        const errContainer = document.querySelector("#grid-flash");
         errContainer.innerText = msg;
+        errContainer.classList.add(`flash-${type}`);
         errContainer.classList.remove("is-hidden");
 
-        setTimeout(() => {
-            errContainer.classList.add("is-hidden");
-        }, 3000);
+        if (timeout) {
+            setTimeout(() => {
+                errContainer.classList.add("is-hidden");
+                errContainer.classList.remove(`flash-${type}`);
+            }, timeout);
+        }
     }
 }
 

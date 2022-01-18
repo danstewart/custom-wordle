@@ -31,7 +31,7 @@ class KeyboardView extends Controller {
         const rows = this.keyboardRows.map(row => html`
             <div class="keyboard-row">
                 ${row.map(letter => html`
-                    <button @click="this.clickLetter()" class="keyboard-key">${letter}</button>
+                    <button @click="this.clickLetter()" class="keyboard-key ${letter === '↵' || letter === '←' ? 'special-key' : ''}">${letter}</button>
                 `).join("")}
             </div>
         `);

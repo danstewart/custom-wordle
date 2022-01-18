@@ -2,12 +2,20 @@ body {
     margin-top: 50px;
 }
 
-#grid-error {
-    background-color: #fb6565;
-    color: white;
+#grid-flash {
     padding: 15px;
     font-size: 1.2em;
     margin-bottom: 15px;
+}
+
+.flash-error {
+    background-color: #fb6565;
+    color: white;
+}
+
+.flash-success {
+    background-color: #387b54;
+    color: white;
 }
 
 .grid-row {
@@ -21,8 +29,8 @@ body {
     border: 1px solid #ccc;
     margin-right: 5px;
     padding: 10px;
-    height: 50px;
-    width: 50px;
+    height: 5rem;
+    width: 5rem;
 }
 
 .grid-item-letter {
@@ -55,5 +63,11 @@ body {
 }
 
 .keyboard-key {
-    margin-right: 5px;
+    margin-right: 0.5em;
+    /* padding: 0.5em 0.75em; */
+}
+
+.special-key {
+    background-color: #656874;
+    color: white;
 }
