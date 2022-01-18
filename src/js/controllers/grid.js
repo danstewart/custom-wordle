@@ -107,9 +107,9 @@ class GridView extends Controller {
 
         // Then find partial matches (right letter, wrong position)
         for (let i = 0; i < this.length; i++) {
-            if (!states[i] && submitted[i] && expected[i] && expected.includes(submitted[i])) {
+            if (!states[i] && expected.includes(submitted[i])) {
                 states[i] = "orange";
-                expected[i] = null;
+                expected[expected.indexOf(submitted[i])] = null;
                 submitted[i] = null;
             }
         }
