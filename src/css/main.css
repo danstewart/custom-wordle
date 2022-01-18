@@ -1,11 +1,25 @@
 body {
     margin-top: 50px;
+    background-color: #f5f5dc;
+    margin-bottom: 150px;
+}
+
+input {
+    margin-bottom: 15px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #grid-flash {
     padding: 15px;
     font-size: 1.2em;
     margin-bottom: 15px;
+    width: 50rem;
 }
 
 .flash-error {

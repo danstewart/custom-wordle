@@ -40,7 +40,11 @@ class GridView extends Controller {
 
     init() {
         this.activeRow = 0;
-        this.targetWord = "GREETING";
+        this.targetWord = "";
+
+        this.loadSettings();
+
+        this.length = this.targetWord.length;
 
         this.rows = [
             new GridRow({ length: this.length }),
@@ -50,6 +54,29 @@ class GridView extends Controller {
             display: block;
             margin-bottom: 25px;
         `;
+    }
+
+    loadSettings() {
+        // TODO: Handle maxTries and hint
+        // TODO: Handle bad settings string
+        const queryString = window.location.search;
+
+        // Convert query string to object
+        const queryObject = {};
+        queryString.slice(1).split("&").forEach(pair => {
+            const [key, value] = pair.split("=");
+            queryObject[key] = value;
+        });
+
+        if (queryObject.settings) {
+            this.settings = JSON.parse(
+                atob(
+                    queryObject.settings
+                )
+            )
+
+            this.targetWord = this.settings.word.toUpperCase();
+        }
     }
 
     renderSelf() {

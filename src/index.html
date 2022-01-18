@@ -12,14 +12,43 @@
         <link rel="stylesheet" href="https://unpkg.com/chota@latest">
         <link rel="stylesheet" href="./css/main.css">
 
-        <script type="module" src="js/main.js"></script>
+        <script type="module" src="js/index.js"></script>
     </head>
 
     <body>
         <div class="container">
-            <h2>Custom Wordle</h2>
-            <grid-view id="grid" length=8></grid-view>
-            <keyboard-view id="keyboard"></keyboard-view>
+            <h1>Custom Wordle</h1>
+
+            <p>Welcome to Custom Wordle!</p>
+            <p>A clone of <a href="https://powerlanguage.co.uk/wordle/">Wordle</a> that lets you make your own games for others.</p>
+
+            <div style="width: 40rem">
+                <label for="word">
+                    Word
+                    <input type="text" id="word" />
+                </label>
+
+                <label for="max-tries">
+                    Max Tries <small>(optional)</small>
+                    <input type="text" id="max-tries" />
+                </label>
+
+                <label for="hint">
+                    Hint <small>(optional)</small>
+                    <input type="text" id="hint" />
+                </label>
+
+                <button id="create">Create Game</button>
+
+                <div id="result" class="is-hidden" style="margin-top: 30px">
+                    <p>OK, you're game has been created:</p>
+                    <p>
+                        <a id="link" href="#"></a>
+                    </p>
+                    <button id="copy-link">Copy Link</button>
+                </div>
+            </div>
+
         </div>
     </body>
 </html>
