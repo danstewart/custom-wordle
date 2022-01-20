@@ -1,6 +1,8 @@
 body {
     margin-top: 50px;
-    background-color: #f5f5dc;
+    /* background-color: #f5f5dc; */
+    background-color: #708090;
+    color: white;
     margin-bottom: 150px;
 }
 
@@ -40,7 +42,7 @@ input {
 }
 
 .grid-item {
-    border: 1px solid #ccc;
+    background-color: white;
     margin-right: 5px;
     padding: 10px;
     height: 5rem;
@@ -52,6 +54,24 @@ input {
     text-align: center;
     line-height: 125%;
     font-weight: bold;
+    color: black;
+}
+
+.keyboard-row {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: 5px;
+}
+
+.keyboard-key {
+    margin-right: 0.5em;
+    height: 4rem;
+}
+
+.special-key {
+    background-color: #656874;
+    color: white;
 }
 
 .green {
@@ -65,23 +85,6 @@ input {
 }
 
 .gray {
-    background-color: gray;
-    color: white;
-}
-
-.keyboard-row {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    margin-bottom: 5px;
-}
-
-.keyboard-key {
-    margin-right: 0.5em;
-    /* padding: 0.5em 0.75em; */
-}
-
-.special-key {
-    background-color: #656874;
+    background-color: #696969;
     color: white;
 }

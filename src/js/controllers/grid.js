@@ -21,7 +21,7 @@ class GridRow extends Controller {
 
             squares.push(html`
                 <div class="grid-item ${state}">
-                    <div class="grid-item-letter">${letter}</div>
+                    <div class="grid-item-letter ${state}">${letter}</div>
                 </div>
             `);
         }
@@ -105,19 +105,12 @@ class GridView extends Controller {
         }
     }
 
-
+    // TODO: Clean this up a bit...
     submitAnswer() {
         const row = this.rows[this.activeRow];
 
         if (row.letters.length < this.length) {
             this.showFlash("Not enough letters!", "error");
-            return;
-        }
-
-        if (row.letters.join("") === this.targetWord) {
-            this.showFlash("Good job!", "success", null);
-            row.state = Array.from({ length: this.length }, () => "green");
-            row.render();
             return;
         }
 
@@ -169,6 +162,14 @@ class GridView extends Controller {
         }
 
         row.state = states;
+
+        // Check for success
+        if (row.letters.join("") === this.targetWord) {
+            this.showFlash("Good job!", "success", null);
+            row.render();
+            return;
+        }
+
         this.activeRow++;
         this.addRow();
     }
