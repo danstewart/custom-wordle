@@ -54,17 +54,17 @@ input {
     font-weight: bold;
 }
 
-.grid-item.green {
+.green {
     background-color: green;
     color: white;
 }
 
-.grid-item.orange {
+.orange {
     background-color: orange;
     color: white;
 }
 
-.grid-item.gray {
+.gray {
     background-color: gray;
     color: white;
 }

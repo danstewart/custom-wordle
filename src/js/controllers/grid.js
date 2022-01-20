@@ -76,6 +76,8 @@ class GridView extends Controller {
             )
 
             this.targetWord = this.settings.word.toUpperCase();
+            this.maxTries = this.settings.maxTries;
+            this.hint = this.settings.hint;
         }
     }
 
@@ -127,6 +129,13 @@ class GridView extends Controller {
         for (let i = 0; i < this.length; i++) {
             if (expected[i] === submitted[i]) {
                 states[i] = "green";
+                
+                const key = document.querySelector(`[data-letter=${submitted[i]}]`);
+                if (key) {
+                    key.classList.remove("orange");
+                    key.classList.add("green");
+                }
+
                 expected[i] = null;
                 submitted[i] = null;
             }
@@ -136,6 +145,12 @@ class GridView extends Controller {
         for (let i = 0; i < this.length; i++) {
             if (!states[i] && expected.includes(submitted[i])) {
                 states[i] = "orange";
+
+                const key = document.querySelector(`[data-letter=${submitted[i]}]`);
+                if (key && !key.classList.contains("green")) {
+                    key.classList.add("orange");
+                }
+
                 expected[expected.indexOf(submitted[i])] = null;
                 submitted[i] = null;
             }
@@ -143,10 +158,15 @@ class GridView extends Controller {
 
         // Then the wrong ones
         for (let i = 0; i < this.length; i++) {
-            if (!states[i]) states[i] = "gray";
-        }
+            if (!states[i]) {
+                states[i] = "gray";
 
-        console.log(states)
+                const key = document.querySelector(`[data-letter=${submitted[i]}]`);
+                if (key) {
+                    key.classList.add("gray");
+                }
+            }
+        }
 
         row.state = states;
         this.activeRow++;
