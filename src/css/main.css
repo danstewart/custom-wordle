@@ -1,5 +1,6 @@
 body {
-    margin-top: 50px;
+    width: 90vw;
+    margin: auto;
     /* background-color: #f5f5dc; */
     background-color: #708090;
     color: white;
@@ -18,6 +19,11 @@ a:hover {
     text-decoration: underline;
 }
 
+#link {
+    white-space: initial;
+    word-wrap: break-word
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -29,7 +35,7 @@ a:hover {
     padding: 15px;
     font-size: 1.2em;
     margin-bottom: 15px;
-    width: 50rem;
+    width: 80vw;
 }
 
 .flash-error {

@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
         <meta name="description" content="" />
         <meta name="keywords" content="" />
         <meta name="author" content="Dan Stewart" />
@@ -18,12 +18,14 @@
 
     <body>
         <div class="container">
-            <h1>Custom Wordle</h1>
+            <div class="text-center">
+                <h1>Custom Wordle</h1>
 
-            <p>Welcome to Custom Wordle!</p>
-            <p>A clone of <a href="https://powerlanguage.co.uk/wordle/">Wordle</a> that lets you make your own games for others.</p>
+                <p>Welcome to Custom Wordle!</p>
+                <p>A clone of <a href="https://powerlanguage.co.uk/wordle/">Wordle</a> that lets you make your own games for others</p>
+            </div>
 
-            <div style="width: 40rem">
+            <div style="width: 400px; max-width: 90vw">
                 <label for="word">
                     Word
                     <input type="text" id="word" />
@@ -41,15 +43,21 @@
                         <input type="text" id="hint" />
                     </label>
                 </div>
-
-                <button id="create">Create Game</button>
+                
+                <div class="is-center">
+                    <button id="create">Create Game</button>
+                </div>
 
                 <div id="result" class="is-hidden" style="margin-top: 30px">
-                    <p>OK, you're game has been created:</p>
+                    <hr />
+                    <p class="text-center">OK, you're game has been created!</p>
                     <p>
                         <a id="link" href="#"></a>
                     </p>
-                    <button id="copy-link">Copy Link</button>
+
+                    <div class="is-center">
+                        <button id="copy-link">Copy Link</button>
+                    </div>
                 </div>
             </div>
 
