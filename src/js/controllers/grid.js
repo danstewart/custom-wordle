@@ -155,7 +155,7 @@ class GridView extends Controller {
                 states[i] = "gray";
 
                 const key = document.querySelector(`[data-letter=${submitted[i]}]`);
-                if (key) {
+                if (key && !key.classList.contains("green") && !key.classList.contains("orange")) {
                     key.classList.add("gray");
                 }
             }

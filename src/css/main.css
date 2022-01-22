@@ -10,6 +10,14 @@ input {
     margin-bottom: 15px;
 }
 
+a {
+    color: #00008b;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 .container {
     display: flex;
     flex-direction: column;

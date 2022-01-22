@@ -1,4 +1,4 @@
-const baseUrl = "http://localhost:8000/src"
+let baseUrl = window.location.href.replace("/index.html", "");
 
 window.addEventListener('DOMContentLoaded', e => {
     const createBtn = document.querySelector("#create");
