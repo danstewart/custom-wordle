@@ -11,6 +11,11 @@ input {
     margin-bottom: 15px;
 }
 
+button {
+    /* Disable double tap to zoom on buttons */
+    touch-action: manipulation;
+}
+
 a {
     color: #00008b;
 }
