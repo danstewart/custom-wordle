@@ -27,17 +27,16 @@ fi
 
 
 if [[ $serve == 1 ]]; then
-    echo "Starting server at http://localhost:8000"
-    cd src
-
     # Transpile JS
     # TODO: Watch and recompile on change
-    swc js -d build/js
+    swc src/js -d src/build/
 
     # Serve
+    echo "Starting server at http://localhost:8000"
+    cd src
     python3 -m http.server
 fi
 
 if [[ $build == 1 ]]; then
-    swc src/js -d src/build/js
+    swc src/js -d src/build/
 fi

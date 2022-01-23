@@ -3,6 +3,11 @@
 A [wordle](https://www.powerlanguage.co.uk/wordle/) clone where you can set a word and send it to others!  
 
 
+### Build dependencies
+```
+sudo npm install --global @swc/cli @swc/core
+```
+
 ### Develop Locally
 ```shell
 # Runs on http://localhost:8000/src/
