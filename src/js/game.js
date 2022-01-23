@@ -5,4 +5,3 @@ import { KeyboardView } from './controllers/keyboard.js';
 registerController(GridRow);
 registerController(GridView);
 registerController(KeyboardView);
-

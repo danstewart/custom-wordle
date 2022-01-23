@@ -20,6 +20,7 @@ if [[ $help == 1 ]] || [[ $serve == 1 && $build == 1 ]]; then
     echo "Usage: ./ctl.sh [--serve] [--build] [--help]"
     echo ""
     echo "--server: Serve the app for local development on http://localhost:8000"
+    echo "          JavaScript will be live transpiled"
     echo "--build:  Build the app for production"
     echo "--help:   Show this help text"
     exit 0
@@ -28,8 +29,7 @@ fi
 
 if [[ $serve == 1 ]]; then
     # Transpile JS
-    # TODO: Watch and recompile on change
-    swc src/js -d src/build/
+    swc --watch src/js --out-dir src/build/ &
 
     # Serve
     echo "Starting server at http://localhost:8000"
@@ -38,5 +38,5 @@ if [[ $serve == 1 ]]; then
 fi
 
 if [[ $build == 1 ]]; then
-    swc src/js -d src/build/
+    swc src/js --out-dir src/build/
 fi

@@ -5,7 +5,10 @@ A [wordle](https://www.powerlanguage.co.uk/wordle/) clone where you can set a wo
 
 ### Build dependencies
 ```
-sudo npm install --global @swc/cli @swc/core
+npm install --global @swc/cli @swc/core
+
+# Only needed for `--serve` mode
+npm install --global chokidar
 ```
 
 ### Develop Locally
