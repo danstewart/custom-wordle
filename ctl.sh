@@ -32,12 +32,12 @@ if [[ $serve == 1 ]]; then
 
     # Transpile JS
     # TODO: Watch and recompile on change
-    swc js -d build
+    swc js -d build/js
 
     # Serve
     python3 -m http.server
 fi
 
 if [[ $build == 1 ]]; then
-    swc src/js -d src/build
+    swc src/js -d src/build/js
 fi
