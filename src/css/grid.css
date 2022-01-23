@@ -1,0 +1,22 @@
+.grid-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.grid-item {
+    background-color: white;
+    margin-right: 5px;
+    padding: 10px;
+    height: 5rem;
+    width: 5rem;
+}
+
+.grid-item-letter {
+    font-size: 22px;
+    text-align: center;
+    line-height: 125%;
+    font-weight: bold;
+    color: black;
+}

@@ -1,0 +1,28 @@
+.keyboard-row {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: 5px;
+    max-width: 90vw;
+}
+
+.keyboard-key {
+    margin-right: 0.5em;
+    height: 4rem;
+    width: 7vw;
+    text-align: center;
+    padding: 0px;
+}
+
+.special-key {
+    background-color: #656874;
+    color: white;
+}
+
+@media only screen and (min-width:768px){
+    /* Make the keyboard keys a bit narrower on larger screens */
+   .keyboard-key {
+       width: 3vw;
+   }
+}
+

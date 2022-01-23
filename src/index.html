@@ -9,6 +9,10 @@
 
         <title>Custom Wordle</title>
 
+        <link rel="apple-touch-icon" sizes="180x180" href="image/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="image/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="image/favicon-16x16.png">
+
         <link rel="stylesheet" href="https://unpkg.com/chota@latest">
         <link rel="stylesheet" href="./css/main.css">
 
@@ -18,31 +22,28 @@
     <body>
         <div class="container">
             <div class="text-center">
-                <h1>Custom Wordle</h1>
+                <h1><a id="header" href="/">Custom Wordle</a></h1>
 
                 <p>Welcome to Custom Wordle!</p>
                 <p>A clone of <a href="https://powerlanguage.co.uk/wordle/">Wordle</a> that lets you make your own games for others</p>
             </div>
 
-            <div style="width: 400px; max-width: 90vw">
+            <div id="form" style="width: 400px; max-width: 90vw">
                 <label for="word">
                     Word
                     <input type="text" id="word" />
                 </label>
 
-                <!-- TODO -->
-                <div class="is-hidden">
-                    <label for="max-tries">
-                        Max Tries <small>(optional)</small>
-                        <input type="text" id="max-tries" />
-                    </label>
+                <label for="max-tries">
+                    Max Tries <small>(optional)</small>
+                    <input type="text" id="max-tries" />
+                </label>
 
-                    <label for="hint">
-                        Hint <small>(optional)</small>
-                        <input type="text" id="hint" />
-                    </label>
-                </div>
-                
+                <label for="hint">
+                    Hint <small>(optional)</small>
+                    <input type="text" id="hint" />
+                </label>
+
                 <div class="is-center">
                     <button id="create">Create Game</button>
                 </div>

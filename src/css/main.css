@@ -24,6 +24,10 @@ a:hover {
     text-decoration: underline;
 }
 
+a#header {
+    color: white;
+}
+
 #link {
     white-space: initial;
     word-wrap: break-word
@@ -36,7 +40,7 @@ a:hover {
     align-items: center;
 }
 
-#grid-flash {
+#flash {
     padding: 15px;
     font-size: 1.2em;
     margin-bottom: 15px;
@@ -48,52 +52,13 @@ a:hover {
     color: white;
 }
 
-.flash-success {
-    background-color: #387b54;
+.flash-warning {
+    background-color: #ffac05;
     color: white;
 }
 
-.grid-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-bottom: 15px;
-}
-
-.grid-item {
-    background-color: white;
-    margin-right: 5px;
-    padding: 10px;
-    height: 5rem;
-    width: 5rem;
-}
-
-.grid-item-letter {
-    font-size: 22px;
-    text-align: center;
-    line-height: 125%;
-    font-weight: bold;
-    color: black;
-}
-
-.keyboard-row {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    margin-bottom: 5px;
-    max-width: 90vw;
-}
-
-.keyboard-key {
-    margin-right: 0.5em;
-    height: 4rem;
-    width: 7vw;
-    text-align: center;
-    padding: 0px;
-}
-
-.special-key {
-    background-color: #656874;
+.flash-success {
+    background-color: #387b54;
     color: white;
 }
 
@@ -112,9 +77,6 @@ a:hover {
     color: white;
 }
 
-@media only screen and (min-width:768px){
-    /* Make the keyboard keys a bit narrower on larger screens */
-   .keyboard-key {
-       width: 3vw;
-   }
+.is-italic {
+    font-style: italic;
 }

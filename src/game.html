@@ -9,7 +9,14 @@
 
         <title>Custom Wordle</title>
 
+        <link rel="apple-touch-icon" sizes="180x180" href="image/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="image/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="image/favicon-16x16.png">
+
+
         <link rel="stylesheet" href="https://unpkg.com/chota@latest">
+        <link rel="stylesheet" href="./css/grid.css">
+        <link rel="stylesheet" href="./css/keyboard.css">
         <link rel="stylesheet" href="./css/main.css">
 
         <script type="module" src="./build/js/game.js"></script>
@@ -18,9 +25,8 @@
 
     <body>
         <div class="container text-center">
-            <h1>Custom Wordle</h1>
-            <grid-view id="grid"></grid-view>
-            <keyboard-view id="keyboard"></keyboard-view>
+            <h1><a id="header" href="/">Custom Wordle</a></h1>
+            <game-view id="game"></game-view>
         </div>
     </body>
 </html>

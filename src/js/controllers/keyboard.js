@@ -7,23 +7,25 @@ class KeyboardView extends Controller {
             [ "A", "S", "D", "F", "G", "H", "J", "K", "L" ],
             [ "↵", "Z", "X", "C", "V", "B", "N", "M", "←" ],
         ];
+
+        this.keyStates = {};  // Whether the key should be green, orange or gray
     }
 
     clickLetter(e) {
-        const grid = document.querySelector("#grid");
+        const game = document.querySelector("#game");
         const letter = e.target.getAttribute("data-letter");
 
         // Enter
         if (letter === "↵") {
-            grid.submitAnswer();
+            game.submitAnswer();
 
         // Backspace
         } else if (letter === "←") {
-            grid.removeLetter();
+            game.removeLetter();
 
         // Letter
         } else {
-            grid.addLetter(letter)
+            game.addLetter(letter)
         }
     }
 
@@ -33,7 +35,7 @@ class KeyboardView extends Controller {
                 ${row.map(letter => html`
                     <button
                         @click="this.clickLetter()"
-                        class="keyboard-key ${letter === '↵' || letter === '←' ? 'special-key' : ''}"
+                        class="keyboard-key ${letter === '↵' || letter === '←' ? 'special-key' : ''} ${this.keyStates[letter] || ''}"
                         data-letter="${letter}"
                     >
                         ${letter}
