@@ -9,7 +9,12 @@ const generateLink = () => {
         word: document.querySelector("#word").value,
         maxTries: document.querySelector("#max-tries").value,
         hint: document.querySelector("#hint").value,
+        showAnswer: !!document.querySelector("#show-answer").checked,
     };
+
+    if (!settings.word) {
+        return;
+    }
 
     settings = btoa(JSON.stringify(settings));
 
@@ -23,15 +28,28 @@ const generateLink = () => {
  */
 const copyLink = () => {
     const link = document.querySelector("#link");
+    const copyBtn = document.querySelector("#copy-link");
 
-    navigator.clipboard.writeText(link.href).then(function() {
-        copyBtn.innerHTML = "Copied!";
+    const shareData = {
+        title: 'Custom Wordle',
+        text: 'Try my custom wordle puzzle!\n\n',
+        url: link.href,
+    };
+
+    if (navigator.share) {
+        navigator.share(shareData);
+    } else if (navigator.clipboard) {
+        navigator.clipboard.writeText(shareData.text + shareData.url);
+
+        copyBtn.innerText = "Copied!";
+
         setTimeout(() => {
-            copyBtn.innerHTML = "Copy Link";
+            copyBtn.innerText = "Share";
         }, 3000);
-    }, function() {
-        // TODO: Handle error
-    });
+    } else {
+        copyBtn.innerText = "Sorry, share failed :-(";
+        console.error("Cannot access navigator.share or navigator.clipboard")
+    }
 };
 
 window.addEventListener('DOMContentLoaded', e => {

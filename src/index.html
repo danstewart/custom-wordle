@@ -30,7 +30,7 @@
                 <p>A clone of <a href="https://powerlanguage.co.uk/wordle/">Wordle</a> that lets you make your own games for others</p>
             </div>
 
-            <div id="form" style="width: 400px; max-width: 90vw">
+            <div id="form" style="width: 400px; max-width: 90vw; margin-bottom: 15px;">
                 <label for="word">
                     Word
                     <input type="text" id="word" />
@@ -38,7 +38,7 @@
 
                 <label for="max-tries">
                     Max Tries <small>(optional)</small>
-                    <input type="text" id="max-tries" />
+                    <input type="text" id="max-tries" value="6" />
                 </label>
 
                 <label for="hint">
@@ -46,7 +46,12 @@
                     <input type="text" id="hint" />
                 </label>
 
-                <div class="is-center">
+                <label for="show-answer">
+                    Show answer on failure
+                    <input type="checkbox" id="show-answer" />
+                </label>
+
+                <div class="is-center" style="margin-top: 10px">
                     <button id="create">Create Game</button>
                 </div>
 
@@ -58,15 +63,10 @@
                     </p>
 
                     <div class="is-center">
-                        <button id="copy-link">Copy Link</button>
+                        <button id="copy-link">Share</button>
                     </div>
                 </div>
             </div>
-
-            <div style="position: absolute; bottom: 0; margin-bottom: 15px">
-                <a href="https://github.com/danstewart/custom-wordle">Source Code</a>
-            </div>
-
         </div>
     </body>
 </html>
