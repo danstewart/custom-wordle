@@ -9,7 +9,7 @@ class GameView extends Controller {
 
     init() {
         this.loadSettings();
-        
+
         this.tries = 0;  // Keep count of each guess
         this.finished = false;  // Flag to indicate if the game is finished
 
