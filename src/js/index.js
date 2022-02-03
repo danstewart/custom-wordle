@@ -1,4 +1,4 @@
-let baseUrl = window.location.href.replace("/index.html", "");
+let baseUrl = window.location.origin;
 
 
 /**
