@@ -96,6 +96,20 @@ const template = (strings, ...values) => {
 };
 
 
+// Parse a string as a boolean
+// Falsey values are
+// "" (empty string)
+// 0 or "0"
+// false or "false"
+const parseBoolean = (value) => {
+    if (!value || value == "" || value == "0" || value == "false") {
+        return false;
+    }
+
+    return true;
+};
+
+
 export {
     pascalToKebab,
     kebabToCamel,
@@ -103,4 +117,5 @@ export {
     parseDuration,
     template as html,
     template as css,
+    parseBoolean,
 };

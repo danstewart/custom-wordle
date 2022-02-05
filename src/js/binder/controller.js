@@ -19,6 +19,9 @@ const makeController = (base=HTMLElement, extendTag=null) => {
             this.tag = this.tagName.toLowerCase();
             this.root = this;
 
+            // Keep track of all attached events
+            this.__events__ = [];
+
             // Handle <self> node
             // By default an empty element will only contain it's `self` content
             // Can also be added manually using <self></self>
@@ -70,6 +73,12 @@ const makeController = (base=HTMLElement, extendTag=null) => {
         rebind() {
             // TODO: Would be good to bind a specific node/tree
             // Would be useful for renderSelf to bind it's own content only
+
+            // We need to delete all events and before rebinding
+            // Otherwise we would end up with duplicate events
+            this.__events__.forEach(e => e.el.removeEventListener(e.eventType, e.event));
+            this.__events__ = [];
+
             this.#bindEvents();
             this.#bindArgs();
             this.#bindDataValues();
@@ -112,6 +121,17 @@ const makeController = (base=HTMLElement, extendTag=null) => {
             }
         }
 
+        getTag(tag) {
+            return this.querySelector(`[data-tag="${tag}"]`) || this.querySelector(`[\\:tag="${tag}"]`);
+        }
+
+        getTagAll(tag) {
+            return [
+                ...this.querySelectorAll(`[data-tag="${tag}"]`),
+                ...this.querySelectorAll(`[\\:tag="${tag}"]`),
+            ]
+        }
+
         /**
          * Expected to be overridden if needed
          * Should render the <self></self> element
@@ -144,6 +164,7 @@ const makeController = (base=HTMLElement, extendTag=null) => {
                 const evalMode = el.hasAttribute(`@render.eval`);
 
                 let replacerRegex = /\$\{(.*?)\}/g;  // Find template vars: ${var}
+
                 template.replace(replacerRegex, (replacer, key) => {
                     if (evalMode) {
                         const fn = new Function(`return ${key}`);
@@ -156,7 +177,9 @@ const makeController = (base=HTMLElement, extendTag=null) => {
 
                         // Split on dots and brackets and strip out any quotes
                         key.split(/[\.\[\]]/).filter(item => !!item).forEach(part => {
-                            part = part.replace(/["']/g, '')
+                            part = part.replace(/["']/g, '');  // Strip out square brackets
+                            part = part.replace(/\(\)/g, '');  // Strip out function parens
+
                             if (pos == null && part === "this") {
                                 pos = this;
                                 return;
@@ -167,10 +190,11 @@ const makeController = (base=HTMLElement, extendTag=null) => {
                             } else {
                                 pos = null;
                                 return;
-                            };
+                            }
                         });
 
                         if (pos == null) pos = "";
+                        if (typeof pos === "function") pos = pos.call(this);
                         template = template.replace(replacer, pos.toString() || '');
                     }
                 });
@@ -220,24 +244,32 @@ const makeController = (base=HTMLElement, extendTag=null) => {
 
             const bindEvent = (el, eventType, modifier) => {
                 const value = el.getAttribute(`@${eventType}${modifier}`);
+                const action = value.replace("this.", "").replace("()", "");
 
-                el.addEventListener(eventType, event => {
+                const callable = (event) => {
                     if (modifier.includes('.prevent')) event.preventDefault();
 
                     if (modifier.includes('.eval')) {
                         const fn = new Function(`${value}`);
                         fn.call(this);
                     } else {
-                        const action = value.replace("this.", "").replace("()", "");
-                        this[action](event)
+                        this[action](event);
                     }
+                };
+
+                el.addEventListener(eventType, callable);
+
+                this.__events__.push({
+                    el: el,
+                    event: callable,
+                    eventType: eventType,
                 });
             };
 
             eventTypes.forEach(eventType => {
                 modifiers.forEach(modifier => {
                     const escapedModifier = modifier.replace(/\./g, "\\.");
-                    
+
                     // Handle events on the root node
                     if (this.root.hasAttribute(`@${eventType}${modifier}`)) {
                         bindEvent(this.root, eventType, modifier);
@@ -254,11 +286,11 @@ const makeController = (base=HTMLElement, extendTag=null) => {
 
 
         /**
-         * Find all elements within the controller that has a `:bind` attribute
+         * Find all elements within the controller that has a `@bind` attribute
          * Each element will have it's value bound to the controller under `this`
          * The value of the attribute will be converted from kebab-case to camelCase
          * 
-         * EG. <input :bind="the-input" /> will have it's value bound to `this.theInput`
+         * EG. <input @bind="the-input" /> will have it's value bound to `this.theInput`
          */
         #bindDataValues() {
             const instance = this;
@@ -294,26 +326,26 @@ const makeController = (base=HTMLElement, extendTag=null) => {
                 const eventType = tagToEvent[elType] || tagToEvent.default;
 
                 el.addEventListener(eventType, e => {
-                    const varName = el.getAttribute(`:bind${modifier}`).replace("this.", "");
+                    const varName = el.getAttribute(`@bind${modifier}`).replace("this.", "");
 
                     const handler = handlers[elType] || handlers.default;
                     handler(instance, varName, e);
 
                     // If this element is @reactive this call render()
-                    if (modifiers.includes('.reactive')) instance.render();
+                    if (modifiers.includes('.render')) instance.render();
                 });
             };
 
             const modifiers = [ "", ...permutations([ ".reactive" ], true) ];
             modifiers.forEach(modifier => {
                 // Handle any binds on the root node
-                if (this.root.hasAttribute(`:bind${modifier}`)) {
+                if (this.root.hasAttribute(`@bind${modifier}`)) {
                     bindData(this.root, modifier);
                 }
 
                 // Handle any binds on the children
                 const escapedModifier = modifier.replace(/\./g, "\\.")
-                this.root.querySelectorAll(`[\\:bind${escapedModifier}]`).forEach(el => {
+                this.root.querySelectorAll(`[\\@bind${escapedModifier}]`).forEach(el => {
                     if (!this.#belongsToController(el)) return;
                     bindData(el, modifier);
                 });
