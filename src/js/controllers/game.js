@@ -44,10 +44,7 @@ class GameView extends Controller {
         }
     }
 
-    /**
-     * Render the <self> element
-     */
-    renderSelf() {
+    render() {
         this.self.replaceChildren(
             this.grid,
             this.keyboard,
@@ -67,6 +64,8 @@ class GameView extends Controller {
         }
 
         this.self.insertAdjacentHTML("afterbegin", GameView.flashContainer)
+
+        super.render();
         this.rebind();
     }
 

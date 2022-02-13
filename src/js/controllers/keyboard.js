@@ -29,7 +29,7 @@ class KeyboardView extends Controller {
         }
     }
 
-    renderSelf() {
+    render() {
         const rows = this.keyboardRows.map(row => html`
             <div class="keyboard-row">
                 ${row.map(letter => html`
@@ -45,6 +45,7 @@ class KeyboardView extends Controller {
         `);
 
         this.self.innerHTML = rows.join("");
+        super.render();
         this.rebind();
     }
 }

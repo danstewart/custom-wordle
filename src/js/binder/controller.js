@@ -72,7 +72,6 @@ const makeController = (base=HTMLElement, extendTag=null) => {
          */
         rebind() {
             // TODO: Would be good to bind a specific node/tree
-            // Would be useful for renderSelf to bind it's own content only
 
             // We need to delete all events and before rebinding
             // Otherwise we would end up with duplicate events
@@ -133,24 +132,10 @@ const makeController = (base=HTMLElement, extendTag=null) => {
         }
 
         /**
-         * Expected to be overridden if needed
-         * Should render the <self></self> element
-         * This is the built in template for the custom element
-         */
-        renderSelf() {}
-
-        /**
          * Re-renders everything with the @render attribute
          */
         render() {
             // TODO: Might be handy to be able to render one element or element tree
-
-            // Render self
-            // TODO: Better way to do this?
-            if (this.renderSelf && typeof this.renderSelf === 'function') {
-                this.renderSelf();
-            }
-
             this.#findRenderableElements().forEach(el => {
                 // Store the original template as an attribute on the element on first render
                 let template = el.getAttribute('_template');

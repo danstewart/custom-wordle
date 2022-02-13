@@ -50,8 +50,9 @@ class GridView extends Controller {
         `;
     }
 
-    renderSelf() {
+    render() {
         this.self.replaceChildren(...this.rows);
+        super.render();
         this.rebind();
     }
 
