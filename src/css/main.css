@@ -7,6 +7,14 @@ body {
     margin-bottom: 150px;
 }
 
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 90vw;
+    margin: auto;
+    text-align: center;
+}
+
 input {
     margin-bottom: 15px;
 }
