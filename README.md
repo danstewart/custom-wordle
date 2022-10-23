@@ -21,6 +21,12 @@ npm install --global chokidar
 ```shell
 # One of compilation of app for deployment
 ./ctl.sh --build
+cp -r src/* /data/www/wordle.danstewart.xyz/
 ```
 
-<!-- TODO: Add screenshot here -->
+## Screenshots
+
+![image](https://user-images.githubusercontent.com/10670565/197400983-efded70a-1fb1-4425-bc5c-8dc3ff4ac8dd.png)
+![image](https://user-images.githubusercontent.com/10670565/197400998-c4bbac86-e9a9-4f07-82d6-fa3b869f187e.png)
+
+
