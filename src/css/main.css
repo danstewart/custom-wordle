@@ -95,3 +95,11 @@ a#header {
 .is-italic {
 	font-style: italic;
 }
+
+.error {
+	background-color: #fb6565;
+	color: white;
+	padding: 15px;
+	margin: 15px;
+	visibility: hidden;
+}
