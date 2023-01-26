@@ -16,10 +16,10 @@ while [[ "$#" -gt 0 ]]; do
 	shift
 done
 
-if [[ $help == 1 ]] || [[ $serve == 1 && $build == 1 ]]; then
+if [[ $help == 1 ]] || [[ $serve == 1 && $build == 1 ]] || [[ $serve == 0 && $build == 0 ]]; then
     echo "Usage: ./ctl.sh [--serve] [--build] [--help]"
     echo ""
-    echo "--server: Serve the app for local development on http://localhost:8000"
+    echo "--serve:  Serve the app for local development on http://localhost:8000"
     echo "          JavaScript will be live transpiled"
     echo "--build:  Build the app for production"
     echo "--help:   Show this help text"
