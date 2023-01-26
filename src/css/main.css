@@ -60,6 +60,7 @@ a#header {
 	font-size: 1.2em;
 	margin-bottom: 15px;
 	width: 80vw;
+	margin-left: 5vw;
 }
 
 .flash-error {
