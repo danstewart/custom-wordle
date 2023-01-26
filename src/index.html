@@ -1,82 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-        <meta name="description" content="" />
-        <meta name="keywords" content="" />
-        <meta name="author" content="Dan Stewart" />
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="Dan Stewart" />
 
-        <title>Custom Wordle</title>
+		<title>Custom Wordle</title>
 
-        <link rel="apple-touch-icon" sizes="180x180" href="image/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="image/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="image/favicon-16x16.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="image/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="image/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="image/favicon-16x16.png" />
 
-        <link rel="stylesheet" href="https://unpkg.com/chota@latest">
-        <link rel="stylesheet" href="./css/main.css">
+		<link rel="stylesheet" href="https://unpkg.com/chota@latest" />
+		<link rel="stylesheet" href="./css/main.css" />
 
-        <script type="module" src="./build/js/index.js"></script>
+		<script type="module" src="./build/js/index.js"></script>
 
-        <script defer data-domain="wordle.danstewart.xyz" src="https://stats.danstewart.xyz/js/plausible.js"></script>
-    </head>
+		<script defer data-domain="wordle.danstewart.xyz" src="https://stats.danstewart.xyz/js/plausible.js"></script>
+	</head>
 
-    <body>
-        <div class="container">
-            <div class="text-center">
-                <h1><a id="header" href="/">Custom Wordle</a></h1>
-                <a class="icon" href="https://github.com/danstewart/custom-wordle">
-                    <img src="https://icongr.am/entypo/github.svg?size=32&color=ffffff">
-                </a>
-                <a class="icon" href="https://twitter.com/danstewart_/">
-                    <img src="https://icongr.am/entypo/twitter.svg?size=32&color=ffffff">
-                </a>
+	<body>
+		<div class="container">
+			<div class="text-center">
+				<h1><a id="header" href="/">Custom Wordle</a></h1>
+				<a class="icon" href="https://github.com/danstewart/custom-wordle">
+					<img src="https://icongr.am/entypo/github.svg?size=32&color=ffffff" />
+				</a>
+				<a class="icon" href="https://twitter.com/danstewart_/">
+					<img src="https://icongr.am/entypo/twitter.svg?size=32&color=ffffff" />
+				</a>
 
-                <p>Welcome to Custom Wordle!</p>
-                <p>A clone of <a href="https://powerlanguage.co.uk/wordle/">Wordle</a> that lets you make your own games for others</p>
-            </div>
+				<p>Welcome to Custom Wordle!</p>
+				<p>
+					A clone of <a href="https://powerlanguage.co.uk/wordle/">Wordle</a> that lets you make your own games for
+					others
+				</p>
+			</div>
 
-            <div id="form" style="width: 400px; max-width: 90vw; margin-bottom: 15px;">
-                <label for="word">
-                    Word
-                    <input type="text" id="word" />
-                </label>
+			<div id="form" style="width: 400px; max-width: 90vw; margin-bottom: 15px">
+				<label for="word">
+					Word
+					<input type="text" id="word" />
+				</label>
 
-                <label for="max-tries">
-                    Max Tries <small>(optional)</small>
-                    <input type="text" id="max-tries" value="6" />
-                </label>
+				<label for="max-tries">
+					Max Tries <small>(optional)</small>
+					<input type="text" id="max-tries" value="6" />
+				</label>
 
-                <label for="hint">
-                    Hint <small>(optional)</small>
-                    <input type="text" id="hint" />
-                </label>
+				<label for="hint">
+					Hint <small>(optional)</small>
+					<input type="text" id="hint" />
+				</label>
 
-                <label for="show-answer">
-                    Show answer on failure
-                    <input type="checkbox" id="show-answer" />
-                </label>
+				<label for="show-answer">
+					Show answer on failure
+					<input type="checkbox" id="show-answer" />
+				</label>
 
-                <div class="is-center" style="margin-top: 10px">
-                    <button id="create">Create Game</button>
-                </div>
+				<div class="is-center" style="margin-top: 10px">
+					<button id="create">Create Game</button>
+				</div>
 
-                <div id="result" class="is-hidden" style="margin-top: 30px">
-                    <hr />
-                    <p class="text-center">OK, your game has been created!</p>
-                    <p>
-                        <a id="link" href="#"></a>
-                    </p>
+				<div id="result" class="is-hidden" style="margin-top: 30px">
+					<hr />
+					<p class="text-center">OK, your game has been created!</p>
+					<p>
+						<a id="link" href="#"></a>
+					</p>
 
-                    <div class="is-center">
-                        <button id="copy-link">Share</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+					<div class="is-center">
+						<button id="copy-link">Share</button>
+					</div>
+				</div>
+			</div>
+		</div>
 
-        <footer>
-            <p>Built by <a href="https://danstewart.dev">Dan Stewart</a></p>
-        </footer>
-    </body>
+		<footer>
+			<p>Built by <a href="https://danstewart.dev">Dan Stewart</a></p>
+		</footer>
+	</body>
 </html>

@@ -1,95 +1,97 @@
 body {
-    width: 90vw;
-    margin: auto;
-    /* background-color: #f5f5dc; */
-    background-color: #708090;
-    color: white;
-    margin-bottom: 150px;
+	margin: auto;
+	background-color: #708090;
+	color: white;
+	margin-bottom: 150px;
 }
 
 footer {
-    position: absolute;
-    bottom: 0;
-    width: 90vw;
-    margin: auto;
-    text-align: center;
+	position: fixed;
+	bottom: 0;
+	width: 100vw;
+	margin: auto;
+	text-align: center;
+	background-color: #708090;
+	padding-top: 5px;
+	border-top: 1px solid white;
 }
 
 input {
-    margin-bottom: 15px;
+	margin-bottom: 15px;
 }
 
 button {
-    /* Disable double tap to zoom on buttons */
-    touch-action: manipulation;
+	/* Disable double tap to zoom on buttons */
+	touch-action: manipulation;
 }
 
 a {
-    color: #00008b;
+	color: #00008b;
 }
 
 a:hover {
-    text-decoration: underline;
+	text-decoration: underline;
 }
 
 a#header {
-    color: white;
+	color: white;
 }
 
 .icon > img {
-    margin-bottom: 10px;
-    margin-right: 15px;
+	margin-bottom: 10px;
+	margin-right: 15px;
 }
 
 #link {
-    white-space: initial;
-    word-wrap: break-word
+	white-space: initial;
+	word-wrap: break-word;
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 90vw;
 }
 
 #flash {
-    padding: 15px;
-    font-size: 1.2em;
-    margin-bottom: 15px;
-    width: 80vw;
+	padding: 15px;
+	font-size: 1.2em;
+	margin-bottom: 15px;
+	width: 80vw;
 }
 
 .flash-error {
-    background-color: #fb6565;
-    color: white;
+	background-color: #fb6565;
+	color: white;
 }
 
 .flash-warning {
-    background-color: #ffac05;
-    color: white;
+	background-color: #ffac05;
+	color: white;
 }
 
 .flash-success {
-    background-color: #387b54;
-    color: white;
+	background-color: #387b54;
+	color: white;
 }
 
 .green {
-    background-color: green;
-    color: white;
+	background-color: green;
+	color: white;
 }
 
 .orange {
-    background-color: orange;
-    color: white;
+	background-color: orange;
+	color: white;
 }
 
 .gray {
-    background-color: #696969;
-    color: white;
+	background-color: #696969;
+	color: white;
 }
 
 .is-italic {
-    font-style: italic;
+	font-style: italic;
 }
