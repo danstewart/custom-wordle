@@ -22,12 +22,11 @@ npm install chokidar
 ./ctl.sh --serve
 ```
 
-### Build for production
+### Deploy
 
 ```shell
-# One of compilation of app for deployment
-./ctl.sh --build
-cp -r src/* /data/www/wordle.danstewart.xyz/
+# Deploy to https://wordle.danstewart.xyz
+./ctl.sh --deploy
 ```
 
 ## Screenshots

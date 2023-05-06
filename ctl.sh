@@ -3,12 +3,14 @@
 # Actions
 serve=0
 build=0
+deploy=0
 help=0
 
 while [[ "$#" -gt 0 ]]; do
 	case "$1" in
 		--serve) serve=1 ;;
 		--build) build=1 ;;
+        --deploy) build=1; deploy=1 ;;
 		-h|--help) help=1 ;;
 		--) shift; break ;;
 	esac
@@ -29,7 +31,7 @@ fi
 
 if [[ $serve == 1 ]]; then
     # Transpile JS
-    swc --watch src/js --out-dir src/build/ &
+    npx swc src/js --out-dir src/build/ --watch &
 
     # Serve
     echo "Starting server at http://localhost:8000"
@@ -38,5 +40,9 @@ if [[ $serve == 1 ]]; then
 fi
 
 if [[ $build == 1 ]]; then
-    swc src/js --out-dir src/build/
+    npx swc src/js --out-dir src/build/
+fi
+
+if [[ $deploy == 1 ]]; then
+    scp -r src/* 192.168.4.72:/data/www/wordle.danstewart.xyz/
 fi

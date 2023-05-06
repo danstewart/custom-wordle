@@ -1,0 +1,784 @@
+0 verbose cli /home/dan/.cache/hermit/pkg/node@18/bin/node /home/dan/Code/custom-wordle/.hermit/node/bin/npm
+1 info using npm@9.4.0
+2 info using node@v18.13.0
+3 timing npm:load:whichnode Completed in 0ms
+4 timing config:load:defaults Completed in 1ms
+5 timing config:load:file:/home/dan/Code/custom-wordle/.hermit/node/lib/node_modules/npm/npmrc Completed in 0ms
+6 timing config:load:builtin Completed in 0ms
+7 timing config:load:cli Completed in 1ms
+8 timing config:load:env Completed in 0ms
+9 timing config:load:file:/home/dan/Code/custom-wordle/.npmrc Completed in 0ms
+10 timing config:load:project Completed in 0ms
+11 timing config:load:file:/home/dan/.npmrc Completed in 0ms
+12 timing config:load:user Completed in 1ms
+13 timing config:load:file:/home/dan/Code/custom-wordle/.hermit/node/etc/npmrc Completed in 0ms
+14 timing config:load:global Completed in 0ms
+15 timing config:load:setEnvs Completed in 0ms
+16 timing config:load Completed in 4ms
+17 timing npm:load:configload Completed in 4ms
+18 timing npm:load:mkdirpcache Completed in 0ms
+19 timing npm:load:mkdirplogs Completed in 0ms
+20 verbose title npm install swc
+21 verbose argv "install" "swc"
+22 timing npm:load:setTitle Completed in 1ms
+23 timing config:load:flatten Completed in 1ms
+24 timing npm:load:display Completed in 2ms
+25 verbose logfile logs-max:10 dir:/home/dan/Code/custom-wordle/.hermit/node/cache/_logs/2023-05-06T11_42_31_333Z-
+26 verbose logfile /home/dan/Code/custom-wordle/.hermit/node/cache/_logs/2023-05-06T11_42_31_333Z-debug-0.log
+27 timing npm:load:logFile Completed in 2ms
+28 timing npm:load:timers Completed in 0ms
+29 timing npm:load:configScope Completed in 0ms
+30 timing npm:load Completed in 9ms
+31 timing arborist:ctor Completed in 1ms
+32 silly logfile done cleaning log files
+33 timing idealTree:init Completed in 60ms
+34 timing idealTree:userRequests Completed in 0ms
+35 silly idealTree buildDeps
+36 silly fetch manifest swc@*
+37 http fetch GET 200 https://registry.npmjs.org/swc 12ms (cache hit)
+38 silly placeDep ROOT swc@1.0.11 OK for:  want: *
+39 timing idealTree:#root Completed in 16ms
+40 timing idealTree:node_modules/swc Completed in 0ms
+41 timing idealTree:buildDeps Completed in 17ms
+42 timing idealTree:fixDepFlags Completed in 1ms
+43 timing idealTree Completed in 82ms
+44 timing reify:loadTrees Completed in 82ms
+45 timing reify:diffTrees Completed in 3ms
+46 silly reify moves {}
+47 timing reify:retireShallow Completed in 1ms
+48 timing reify:createSparse Completed in 7ms
+49 timing reify:loadBundles Completed in 0ms
+50 silly audit bulk request {
+50 silly audit   '@nodelib/fs.scandir': [ '2.1.5' ],
+50 silly audit   '@nodelib/fs.stat': [ '2.0.5' ],
+50 silly audit   '@nodelib/fs.walk': [ '1.2.8' ],
+50 silly audit   '@sindresorhus/is': [ '0.7.0' ],
+50 silly audit   '@swc/cli': [ '0.1.59' ],
+50 silly audit   '@swc/core': [ '1.3.29' ],
+50 silly audit   '@swc/core-darwin-arm64': [ '1.3.29' ],
+50 silly audit   '@swc/core-darwin-x64': [ '1.3.29' ],
+50 silly audit   '@swc/core-linux-arm-gnueabihf': [ '1.3.29' ],
+50 silly audit   '@swc/core-linux-arm64-gnu': [ '1.3.29' ],
+50 silly audit   '@swc/core-linux-arm64-musl': [ '1.3.29' ],
+50 silly audit   '@swc/core-linux-x64-gnu': [ '1.3.29' ],
+50 silly audit   '@swc/core-linux-x64-musl': [ '1.3.29' ],
+50 silly audit   '@swc/core-win32-arm64-msvc': [ '1.3.29' ],
+50 silly audit   '@swc/core-win32-ia32-msvc': [ '1.3.29' ],
+50 silly audit   '@swc/core-win32-x64-msvc': [ '1.3.29' ],
+50 silly audit   anymatch: [ '3.1.3' ],
+50 silly audit   arch: [ '2.2.0' ],
+50 silly audit   'archive-type': [ '4.0.0' ],
+50 silly audit   'file-type': [ '4.4.0', '5.2.0', '6.2.0', '3.9.0', '8.1.0' ],
+50 silly audit   'base64-js': [ '1.5.1' ],
+50 silly audit   'bin-check': [ '4.1.0' ],
+50 silly audit   'bin-version': [ '3.1.0' ],
+50 silly audit   'bin-version-check': [ '4.0.0' ],
+50 silly audit   semver: [ '5.7.1', '7.3.8' ],
+50 silly audit   'cross-spawn': [ '6.0.5', '5.1.0' ],
+50 silly audit   execa: [ '1.0.0', '0.7.0' ],
+50 silly audit   'get-stream': [ '4.1.0', '2.3.1', '3.0.0' ],
+50 silly audit   'bin-wrapper': [ '4.1.0' ],
+50 silly audit   'binary-extensions': [ '2.2.0' ],
+50 silly audit   bl: [ '1.2.3' ],
+50 silly audit   braces: [ '3.0.2' ],
+50 silly audit   buffer: [ '5.7.1' ],
+50 silly audit   'buffer-alloc': [ '1.2.0' ],
+50 silly audit   'buffer-alloc-unsafe': [ '1.1.0' ],
+50 silly audit   'buffer-crc32': [ '0.2.13' ],
+50 silly audit   'buffer-fill': [ '1.0.0' ],
+50 silly audit   'cacheable-request': [ '2.1.4' ],
+50 silly audit   'lowercase-keys': [ '1.0.0', '1.0.1' ],
+50 silly audit   caw: [ '2.0.1' ],
+50 silly audit   chokidar: [ '3.5.3' ],
+50 silly audit   'clone-response': [ '1.0.2' ],
+50 silly audit   commander: [ '7.2.0', '2.20.3' ],
+50 silly audit   'config-chain': [ '1.1.13' ],
+50 silly audit   'content-disposition': [ '0.5.4' ],
+50 silly audit   'core-util-is': [ '1.0.3' ],
+50 silly audit   'decode-uri-component': [ '0.2.2' ],
+50 silly audit   decompress: [ '4.2.1' ],
+50 silly audit   'decompress-response': [ '3.3.0' ],
+50 silly audit   'decompress-tar': [ '4.1.1' ],
+50 silly audit   'decompress-tarbz2': [ '4.1.1' ],
+50 silly audit   'decompress-targz': [ '4.1.1' ],
+50 silly audit   'decompress-unzip': [ '4.0.1' ],
+50 silly audit   pify: [ '2.3.0', '3.0.0', '4.0.1' ],
+50 silly audit   download: [ '7.1.0' ],
+50 silly audit   duplexer3: [ '0.1.5' ],
+50 silly audit   'end-of-stream': [ '1.4.4' ],
+50 silly audit   'escape-string-regexp': [ '1.0.5' ],
+50 silly audit   executable: [ '4.1.1' ],
+50 silly audit   'ext-list': [ '2.2.2' ],
+50 silly audit   'ext-name': [ '5.0.0' ],
+50 silly audit   'fast-glob': [ '3.2.12' ],
+50 silly audit   fastq: [ '1.15.0' ],
+50 silly audit   'fd-slicer': [ '1.1.0' ],
+50 silly audit   'filename-reserved-regex': [ '2.0.0' ],
+50 silly audit   filenamify: [ '2.1.0' ],
+50 silly audit   'fill-range': [ '7.0.1' ],
+50 silly audit   'find-versions': [ '3.2.0' ],
+50 silly audit   from2: [ '2.3.0' ],
+50 silly audit   'fs-constants': [ '1.0.0' ],
+50 silly audit   fsevents: [ '2.3.2' ],
+50 silly audit   'get-proxy': [ '2.1.0' ],
+50 silly audit   'glob-parent': [ '5.1.2' ],
+50 silly audit   got: [ '8.3.2' ],
+50 silly audit   'graceful-fs': [ '4.2.10' ],
+50 silly audit   'has-symbol-support-x': [ '1.4.2' ],
+50 silly audit   'has-to-string-tag-x': [ '1.4.1' ],
+50 silly audit   'http-cache-semantics': [ '3.8.1' ],
+50 silly audit   ieee754: [ '1.2.1' ],
+50 silly audit   'import-lazy': [ '3.1.0' ],
+50 silly audit   inherits: [ '2.0.4' ],
+50 silly audit   ini: [ '1.3.8' ],
+50 silly audit   'into-stream': [ '3.1.0' ],
+50 silly audit   'is-binary-path': [ '2.1.0' ],
+50 silly audit   'is-extglob': [ '2.1.1' ],
+50 silly audit   'is-glob': [ '4.0.3' ],
+50 silly audit   'is-natural-number': [ '4.0.1' ],
+50 silly audit   'is-number': [ '7.0.0' ],
+50 silly audit   'is-object': [ '1.0.2' ],
+50 silly audit   'is-plain-obj': [ '1.1.0' ],
+50 silly audit   'is-retry-allowed': [ '1.2.0' ],
+50 silly audit   'is-stream': [ '1.1.0' ],
+50 silly audit   isarray: [ '1.0.0' ],
+50 silly audit   isexe: [ '2.0.0' ],
+50 silly audit   isurl: [ '1.0.0' ],
+50 silly audit   'json-buffer': [ '3.0.0' ],
+50 silly audit   keyv: [ '3.0.0' ],
+50 silly audit   'lru-cache': [ '4.1.5', '6.0.0' ],
+50 silly audit   'make-dir': [ '1.3.0' ],
+50 silly audit   merge2: [ '1.4.1' ],
+50 silly audit   micromatch: [ '4.0.5' ],
+50 silly audit   'mime-db': [ '1.52.0' ],
+50 silly audit   'mimic-response': [ '1.0.1' ],
+50 silly audit   'nice-try': [ '1.0.5' ],
+50 silly audit   'normalize-path': [ '3.0.0' ],
+50 silly audit   'normalize-url': [ '2.0.1' ],
+50 silly audit   'npm-conf': [ '1.1.3' ],
+50 silly audit   'npm-run-path': [ '2.0.2' ],
+50 silly audit   'object-assign': [ '4.1.1' ],
+50 silly audit   once: [ '1.4.0' ],
+50 silly audit   'os-filter-obj': [ '2.0.0' ],
+50 silly audit   'p-cancelable': [ '0.4.1' ],
+50 silly audit   'p-event': [ '2.3.1' ],
+50 silly audit   'p-finally': [ '1.0.0' ],
+50 silly audit   'p-is-promise': [ '1.1.0' ],
+50 silly audit   'p-timeout': [ '2.0.1' ],
+50 silly audit   'path-key': [ '2.0.1' ],
+50 silly audit   pend: [ '1.2.0' ],
+50 silly audit   picomatch: [ '2.3.1' ],
+50 silly audit   pinkie: [ '2.0.4' ],
+50 silly audit   'pinkie-promise': [ '2.0.1' ],
+50 silly audit   'prepend-http': [ '2.0.0' ],
+50 silly audit   'process-nextick-args': [ '2.0.1' ],
+50 silly audit   'proto-list': [ '1.2.4' ],
+50 silly audit   pseudomap: [ '1.0.2' ],
+50 silly audit   pump: [ '3.0.0' ],
+50 silly audit   'query-string': [ '5.1.1' ],
+50 silly audit   'queue-microtask': [ '1.2.3' ],
+50 silly audit   'readable-stream': [ '2.3.7' ],
+50 silly audit   'safe-buffer': [ '5.1.2', '5.2.1' ],
+50 silly audit   readdirp: [ '3.6.0' ],
+50 silly audit   responselike: [ '1.0.2' ],
+50 silly audit   reusify: [ '1.0.4' ],
+50 silly audit   'run-parallel': [ '1.2.0' ],
+50 silly audit   'seek-bzip': [ '1.0.6' ],
+50 silly audit   'semver-regex': [ '2.0.0' ],
+50 silly audit   'semver-truncate': [ '1.1.2' ],
+50 silly audit   yallist: [ '4.0.0', '2.1.2' ],
+50 silly audit   'shebang-command': [ '1.2.0' ],
+50 silly audit   'shebang-regex': [ '1.0.0' ],
+50 silly audit   'signal-exit': [ '3.0.7' ],
+50 silly audit   slash: [ '3.0.0' ],
+50 silly audit   'sort-keys': [ '2.0.0', '1.1.2' ],
+50 silly audit   'sort-keys-length': [ '1.0.1' ],
+50 silly audit   'source-map': [ '0.7.4' ],
+50 silly audit   'strict-uri-encode': [ '1.1.0' ],
+50 silly audit   string_decoder: [ '1.1.1' ],
+50 silly audit   'strip-dirs': [ '2.1.0' ],
+50 silly audit   'strip-eof': [ '1.0.0' ],
+50 silly audit   'strip-outer': [ '1.0.1' ],
+50 silly audit   'tar-stream': [ '1.6.2' ],
+50 silly audit   through: [ '2.3.8' ],
+50 silly audit   'timed-out': [ '4.0.1' ],
+50 silly audit   'to-buffer': [ '1.1.1' ],
+50 silly audit   'to-regex-range': [ '5.0.1' ],
+50 silly audit   'trim-repeated': [ '1.0.0' ],
+50 silly audit   'tunnel-agent': [ '0.6.0' ],
+50 silly audit   'unbzip2-stream': [ '1.4.3' ],
+50 silly audit   'url-parse-lax': [ '3.0.0' ],
+50 silly audit   'url-to-options': [ '1.0.1' ],
+50 silly audit   'util-deprecate': [ '1.0.2' ],
+50 silly audit   which: [ '1.3.1' ],
+50 silly audit   wrappy: [ '1.0.2' ],
+50 silly audit   xtend: [ '4.0.2' ],
+50 silly audit   yauzl: [ '2.10.0' ],
+50 silly audit   swc: [ '1.0.11' ]
+50 silly audit }
+51 verbose reify failed optional dependency /home/dan/Code/custom-wordle/node_modules/fsevents
+52 silly reify mark deleted [ '/home/dan/Code/custom-wordle/node_modules/fsevents' ]
+53 verbose reify failed optional dependency /home/dan/Code/custom-wordle/node_modules/@swc/core-win32-x64-msvc
+54 silly reify mark deleted [
+54 silly reify   '/home/dan/Code/custom-wordle/node_modules/@swc/core-win32-x64-msvc'
+54 silly reify ]
+55 verbose reify failed optional dependency /home/dan/Code/custom-wordle/node_modules/@swc/core-win32-ia32-msvc
+56 silly reify mark deleted [
+56 silly reify   '/home/dan/Code/custom-wordle/node_modules/@swc/core-win32-ia32-msvc'
+56 silly reify ]
+57 verbose reify failed optional dependency /home/dan/Code/custom-wordle/node_modules/@swc/core-win32-arm64-msvc
+58 silly reify mark deleted [
+58 silly reify   '/home/dan/Code/custom-wordle/node_modules/@swc/core-win32-arm64-msvc'
+58 silly reify ]
+59 verbose reify failed optional dependency /home/dan/Code/custom-wordle/node_modules/@swc/core-linux-arm64-musl
+60 silly reify mark deleted [
+60 silly reify   '/home/dan/Code/custom-wordle/node_modules/@swc/core-linux-arm64-musl'
+60 silly reify ]
+61 verbose reify failed optional dependency /home/dan/Code/custom-wordle/node_modules/@swc/core-linux-arm64-gnu
+62 silly reify mark deleted [
+62 silly reify   '/home/dan/Code/custom-wordle/node_modules/@swc/core-linux-arm64-gnu'
+62 silly reify ]
+63 verbose reify failed optional dependency /home/dan/Code/custom-wordle/node_modules/@swc/core-linux-arm-gnueabihf
+64 silly reify mark deleted [
+64 silly reify   '/home/dan/Code/custom-wordle/node_modules/@swc/core-linux-arm-gnueabihf'
+64 silly reify ]
+65 verbose reify failed optional dependency /home/dan/Code/custom-wordle/node_modules/@swc/core-darwin-x64
+66 silly reify mark deleted [ '/home/dan/Code/custom-wordle/node_modules/@swc/core-darwin-x64' ]
+67 verbose reify failed optional dependency /home/dan/Code/custom-wordle/node_modules/@swc/core-darwin-arm64
+68 silly reify mark deleted [ '/home/dan/Code/custom-wordle/node_modules/@swc/core-darwin-arm64' ]
+69 timing reifyNode:node_modules/fsevents Completed in 39ms
+70 timing reifyNode:node_modules/@swc/core-win32-x64-msvc Completed in 38ms
+71 timing reifyNode:node_modules/@swc/core-win32-ia32-msvc Completed in 38ms
+72 timing reifyNode:node_modules/@swc/core-win32-arm64-msvc Completed in 38ms
+73 timing reifyNode:node_modules/@swc/core-linux-arm64-musl Completed in 37ms
+74 timing reifyNode:node_modules/@swc/core-linux-arm64-gnu Completed in 37ms
+75 timing reifyNode:node_modules/@swc/core-linux-arm-gnueabihf Completed in 37ms
+76 timing reifyNode:node_modules/@swc/core-darwin-x64 Completed in 37ms
+77 timing reifyNode:node_modules/@swc/core-darwin-arm64 Completed in 37ms
+78 silly tarball no local data for swc@https://registry.npmjs.org/swc/-/swc-1.0.11.tgz. Extracting by manifest.
+79 timing reifyNode:node_modules/buffer-fill Completed in 406ms
+80 timing reifyNode:node_modules/buffer-alloc-unsafe Completed in 406ms
+81 timing reifyNode:node_modules/buffer-alloc Completed in 406ms
+82 timing reifyNode:node_modules/cacheable-request/node_modules/lowercase-keys Completed in 407ms
+83 timing reifyNode:node_modules/wrappy Completed in 411ms
+84 timing reifyNode:node_modules/url-to-options Completed in 411ms
+85 timing reifyNode:node_modules/url-parse-lax Completed in 411ms
+86 timing reifyNode:node_modules/trim-repeated Completed in 411ms
+87 timing reifyNode:node_modules/timed-out Completed in 411ms
+88 timing reifyNode:node_modules/strip-outer Completed in 412ms
+89 timing reifyNode:node_modules/strict-uri-encode Completed in 412ms
+90 timing reifyNode:node_modules/strip-eof Completed in 412ms
+91 timing reifyNode:node_modules/sort-keys-length Completed in 412ms
+92 timing reifyNode:node_modules/strip-dirs Completed in 412ms
+93 timing reifyNode:node_modules/sort-keys Completed in 411ms
+94 timing reifyNode:node_modules/shebang-command Completed in 411ms
+95 timing reifyNode:node_modules/shebang-regex Completed in 411ms
+96 timing reifyNode:node_modules/semver-truncate Completed in 411ms
+97 timing reifyNode:node_modules/semver-regex Completed in 411ms
+98 timing reifyNode:node_modules/run-parallel Completed in 412ms
+99 timing reifyNode:node_modules/query-string Completed in 412ms
+100 timing reifyNode:node_modules/prepend-http Completed in 412ms
+101 timing reifyNode:node_modules/process-nextick-args Completed in 412ms
+102 timing reifyNode:node_modules/pinkie-promise Completed in 412ms
+103 timing reifyNode:node_modules/pinkie Completed in 412ms
+104 timing reifyNode:node_modules/pify Completed in 412ms
+105 timing reifyNode:node_modules/p-is-promise Completed in 412ms
+106 timing reifyNode:node_modules/p-finally Completed in 412ms
+107 timing reifyNode:node_modules/path-key Completed in 413ms
+108 timing reifyNode:node_modules/p-timeout Completed in 413ms
+109 timing reifyNode:node_modules/os-filter-obj Completed in 412ms
+110 timing reifyNode:node_modules/once Completed in 412ms
+111 timing reifyNode:node_modules/p-cancelable Completed in 412ms
+112 timing reifyNode:node_modules/npm-run-path Completed in 412ms
+113 timing reifyNode:node_modules/mimic-response Completed in 412ms
+114 timing reifyNode:node_modules/normalize-url Completed in 412ms
+115 timing reifyNode:node_modules/normalize-path Completed in 412ms
+116 timing reifyNode:node_modules/object-assign Completed in 412ms
+117 timing reifyNode:node_modules/make-dir Completed in 412ms
+118 timing reifyNode:node_modules/lowercase-keys Completed in 413ms
+119 timing reifyNode:node_modules/merge2 Completed in 413ms
+120 timing reifyNode:node_modules/is-retry-allowed Completed in 413ms
+121 timing reifyNode:node_modules/is-stream Completed in 413ms
+122 timing reifyNode:node_modules/is-plain-obj Completed in 413ms
+123 timing reifyNode:node_modules/isurl Completed in 413ms
+124 timing reifyNode:node_modules/is-number Completed in 413ms
+125 timing reifyNode:node_modules/is-extglob Completed in 413ms
+126 timing reifyNode:node_modules/ini Completed in 413ms
+127 timing reifyNode:node_modules/into-stream Completed in 413ms
+128 timing reifyNode:node_modules/import-lazy Completed in 414ms
+129 timing reifyNode:node_modules/get-proxy Completed in 413ms
+130 timing reifyNode:node_modules/filename-reserved-regex Completed in 413ms
+131 timing reifyNode:node_modules/filenamify Completed in 413ms
+132 timing reifyNode:node_modules/ext-list Completed in 413ms
+133 timing reifyNode:node_modules/ext-name Completed in 413ms
+134 timing reifyNode:node_modules/executable Completed in 413ms
+135 timing reifyNode:node_modules/duplexer3 Completed in 413ms
+136 timing reifyNode:node_modules/download Completed in 414ms
+137 timing reifyNode:node_modules/escape-string-regexp Completed in 414ms
+138 timing reifyNode:node_modules/decompress-targz Completed in 414ms
+139 timing reifyNode:node_modules/decompress-tarbz2 Completed in 414ms
+140 timing reifyNode:node_modules/decompress-tar Completed in 413ms
+141 timing reifyNode:node_modules/decompress-response Completed in 413ms
+142 timing reifyNode:node_modules/decompress-unzip Completed in 414ms
+143 timing reifyNode:node_modules/decompress Completed in 413ms
+144 timing reifyNode:node_modules/decode-uri-component Completed in 413ms
+145 timing reifyNode:node_modules/end-of-stream Completed in 414ms
+146 timing reifyNode:node_modules/caw Completed in 414ms
+147 timing reifyNode:node_modules/buffer-crc32 Completed in 414ms
+148 timing reifyNode:node_modules/bin-version-check Completed in 414ms
+149 timing reifyNode:node_modules/bin-check Completed in 414ms
+150 timing reifyNode:node_modules/archive-type Completed in 414ms
+151 timing reifyNode:node_modules/bin-wrapper Completed in 414ms
+152 timing reifyNode:node_modules/sort-keys-length/node_modules/sort-keys Completed in 418ms
+153 timing reifyNode:node_modules/make-dir/node_modules/pify Completed in 417ms
+154 timing reifyNode:node_modules/npm-conf/node_modules/pify Completed in 417ms
+155 timing reifyNode:node_modules/got/node_modules/pify Completed in 416ms
+156 timing reifyNode:node_modules/download/node_modules/pify Completed in 416ms
+157 timing reifyNode:node_modules/decompress-unzip/node_modules/pify Completed in 416ms
+158 timing reifyNode:node_modules/executable/node_modules/pify Completed in 416ms
+159 timing reifyNode:node_modules/decompress-unzip/node_modules/file-type Completed in 416ms
+160 timing reifyNode:node_modules/decompress/node_modules/pify Completed in 415ms
+161 timing reifyNode:node_modules/decompress-tarbz2/node_modules/file-type Completed in 416ms
+162 timing reifyNode:node_modules/tunnel-agent Completed in 420ms
+163 timing reifyNode:node_modules/to-regex-range Completed in 420ms
+164 timing reifyNode:node_modules/signal-exit Completed in 419ms
+165 timing reifyNode:node_modules/slash Completed in 419ms
+166 timing reifyNode:node_modules/responselike Completed in 419ms
+167 timing reifyNode:node_modules/queue-microtask Completed in 419ms
+168 timing reifyNode:node_modules/pend Completed in 419ms
+169 timing reifyNode:node_modules/p-event Completed in 419ms
+170 timing reifyNode:node_modules/lru-cache Completed in 419ms
+171 timing reifyNode:node_modules/is-natural-number Completed in 419ms
+172 timing reifyNode:node_modules/is-binary-path Completed in 419ms
+173 timing reifyNode:node_modules/is-glob Completed in 419ms
+174 timing reifyNode:node_modules/inherits Completed in 419ms
+175 timing reifyNode:node_modules/ieee754 Completed in 419ms
+176 timing reifyNode:node_modules/fs-constants Completed in 418ms
+177 timing reifyNode:node_modules/find-versions Completed in 418ms
+178 timing reifyNode:node_modules/glob-parent Completed in 418ms
+179 timing reifyNode:node_modules/get-stream Completed in 419ms
+180 timing reifyNode:node_modules/fill-range Completed in 419ms
+181 timing reifyNode:node_modules/core-util-is Completed in 418ms
+182 timing reifyNode:node_modules/config-chain Completed in 418ms
+183 timing reifyNode:node_modules/clone-response Completed in 418ms
+184 timing reifyNode:node_modules/bin-version Completed in 418ms
+185 timing reifyNode:node_modules/anymatch Completed in 418ms
+186 timing reifyNode:node_modules/semver/node_modules/lru-cache Completed in 422ms
+187 timing reifyNode:node_modules/decompress-unzip/node_modules/get-stream Completed in 420ms
+188 timing reifyNode:node_modules/decompress-targz/node_modules/file-type Completed in 420ms
+189 timing reifyNode:node_modules/decompress-tar/node_modules/file-type Completed in 419ms
+190 timing reifyNode:node_modules/bin-version/node_modules/get-stream Completed in 419ms
+191 timing reifyNode:node_modules/util-deprecate Completed in 423ms
+192 timing reifyNode:node_modules/yallist Completed in 423ms
+193 timing reifyNode:node_modules/to-buffer Completed in 423ms
+194 timing reifyNode:node_modules/proto-list Completed in 423ms
+195 timing reifyNode:node_modules/nice-try Completed in 422ms
+196 timing reifyNode:node_modules/micromatch Completed in 422ms
+197 timing reifyNode:node_modules/keyv Completed in 422ms
+198 timing reifyNode:node_modules/http-cache-semantics Completed in 423ms
+199 timing reifyNode:node_modules/from2 Completed in 422ms
+200 timing reifyNode:node_modules/file-type Completed in 422ms
+201 timing reifyNode:node_modules/cacheable-request Completed in 421ms
+202 timing reifyNode:node_modules/arch Completed in 421ms
+203 timing reifyNode:node_modules/base64-js Completed in 421ms
+204 timing reifyNode:node_modules/archive-type/node_modules/file-type Completed in 422ms
+205 timing reifyNode:node_modules/semver/node_modules/yallist Completed in 425ms
+206 timing reifyNode:node_modules/xtend Completed in 426ms
+207 timing reifyNode:node_modules/which Completed in 426ms
+208 timing reifyNode:node_modules/string_decoder Completed in 426ms
+209 timing reifyNode:node_modules/readdirp Completed in 426ms
+210 timing reifyNode:node_modules/pump Completed in 426ms
+211 timing reifyNode:node_modules/pseudomap Completed in 426ms
+212 timing reifyNode:node_modules/content-disposition Completed in 423ms
+213 timing reifyNode:node_modules/binary-extensions Completed in 424ms
+214 timing reifyNode:node_modules/string_decoder/node_modules/safe-buffer Completed in 428ms
+215 timing reifyNode:node_modules/readable-stream/node_modules/safe-buffer Completed in 427ms
+216 timing reifyNode:node_modules/yauzl Completed in 429ms
+217 timing reifyNode:node_modules/safe-buffer Completed in 428ms
+218 timing reifyNode:node_modules/isarray Completed in 427ms
+219 timing reifyNode:node_modules/json-buffer Completed in 427ms
+220 timing reifyNode:node_modules/graceful-fs Completed in 426ms
+221 timing reifyNode:node_modules/got Completed in 426ms
+222 timing reifyNode:node_modules/execa Completed in 427ms
+223 timing reifyNode:node_modules/tar-stream Completed in 430ms
+224 timing reifyNode:node_modules/npm-conf Completed in 431ms
+225 timing reifyNode:node_modules/isexe Completed in 431ms
+226 timing reifyNode:node_modules/bl Completed in 429ms
+227 timing reifyNode:node_modules/bin-version/node_modules/execa Completed in 429ms
+228 timing reifyNode:node_modules/reusify Completed in 433ms
+229 timing reifyNode:node_modules/semver-truncate/node_modules/semver Completed in 433ms
+230 timing reifyNode:node_modules/bin-version-check/node_modules/semver Completed in 430ms
+231 timing reifyNode:node_modules/bin-version/node_modules/semver Completed in 430ms
+232 timing reifyNode:node_modules/fd-slicer Completed in 432ms
+233 timing reifyNode:node_modules/seek-bzip/node_modules/commander Completed in 434ms
+234 timing reifyNode:node_modules/bin-version/node_modules/cross-spawn Completed in 431ms
+235 timing reifyNode:node_modules/is-object Completed in 434ms
+236 timing reifyNode:node_modules/buffer Completed in 432ms
+237 timing reifyNode:node_modules/through Completed in 436ms
+238 timing reifyNode:node_modules/seek-bzip Completed in 437ms
+239 timing reifyNode:node_modules/cross-spawn Completed in 434ms
+240 timing reifyNode:node_modules/braces Completed in 434ms
+241 timing reifyNode:node_modules/has-to-string-tag-x Completed in 435ms
+242 timing reifyNode:node_modules/picomatch Completed in 438ms
+243 timing reifyNode:node_modules/chokidar Completed in 435ms
+244 timing reifyNode:node_modules/unbzip2-stream Completed in 439ms
+245 timing reifyNode:node_modules/commander Completed in 436ms
+246 timing reifyNode:node_modules/mime-db Completed in 438ms
+247 timing reifyNode:node_modules/fastq Completed in 438ms
+248 timing reifyNode:node_modules/has-symbol-support-x Completed in 439ms
+249 timing reifyNode:node_modules/@nodelib/fs.stat Completed in 438ms
+250 timing reifyNode:node_modules/@sindresorhus/is Completed in 440ms
+251 timing reifyNode:node_modules/@nodelib/fs.scandir Completed in 441ms
+252 timing reifyNode:node_modules/readable-stream Completed in 446ms
+253 timing reifyNode:node_modules/@nodelib/fs.walk Completed in 443ms
+254 timing reifyNode:node_modules/source-map Completed in 448ms
+255 timing reifyNode:node_modules/semver Completed in 450ms
+256 timing reifyNode:node_modules/@swc/core Completed in 446ms
+257 timing reifyNode:node_modules/@swc/cli Completed in 447ms
+258 timing reifyNode:node_modules/fast-glob Completed in 450ms
+259 timing reifyNode:node_modules/@swc/core-linux-x64-musl Completed in 493ms
+260 timing reifyNode:node_modules/@swc/core-linux-x64-gnu Completed in 493ms
+261 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 567ms
+262 timing auditReport:getReport Completed in 570ms
+263 silly audit report {
+263 silly audit report   got: [
+263 silly audit report     {
+263 silly audit report       id: 1088948,
+263 silly audit report       url: 'https://github.com/advisories/GHSA-pfrx-2q88-qq97',
+263 silly audit report       title: 'Got allows a redirect to a UNIX socket',
+263 silly audit report       severity: 'moderate',
+263 silly audit report       vulnerable_versions: '<11.8.5',
+263 silly audit report       cwe: [],
+263 silly audit report       cvss: [Object]
+263 silly audit report     }
+263 silly audit report   ],
+263 silly audit report   'http-cache-semantics': [
+263 silly audit report     {
+263 silly audit report       id: 1091807,
+263 silly audit report       url: 'https://github.com/advisories/GHSA-rc47-6667-2j5j',
+263 silly audit report       title: 'http-cache-semantics vulnerable to Regular Expression Denial of Service',
+263 silly audit report       severity: 'high',
+263 silly audit report       vulnerable_versions: '<4.1.1',
+263 silly audit report       cwe: [Array],
+263 silly audit report       cvss: [Object]
+263 silly audit report     }
+263 silly audit report   ],
+263 silly audit report   'semver-regex': [
+263 silly audit report     {
+263 silly audit report       id: 1089649,
+263 silly audit report       url: 'https://github.com/advisories/GHSA-44c6-4v22-4mhx',
+263 silly audit report       title: 'Regular Expression Denial of Service (ReDOS)',
+263 silly audit report       severity: 'high',
+263 silly audit report       vulnerable_versions: '<3.1.3',
+263 silly audit report       cwe: [Array],
+263 silly audit report       cvss: [Object]
+263 silly audit report     },
+263 silly audit report     {
+263 silly audit report       id: 1089093,
+263 silly audit report       url: 'https://github.com/advisories/GHSA-4x5v-gmq8-25ch',
+263 silly audit report       title: 'Regular expression denial of service in semver-regex',
+263 silly audit report       severity: 'low',
+263 silly audit report       vulnerable_versions: '<3.1.4',
+263 silly audit report       cwe: [Array],
+263 silly audit report       cvss: [Object]
+263 silly audit report     }
+263 silly audit report   ]
+263 silly audit report }
+264 timing metavuln:cache:get:security-advisory:got:6RwqOtyKHRfIYfVtDkU86+jmAkm03OLYFGvOQUWcpuzfU8h8RNz3w5ZFTGeJ+8QNC0jGK3xFL9UvdqMN+kLCrg== Completed in 2ms
+265 timing metavuln:cache:get:security-advisory:http-cache-semantics:KWSsAVfoi0wiBvJ4LX/Std13sRgj3JoT8nkHRxrhKCBoKe/X0kbLvtW6kvVtCUpKTk17kt7Iw5DVJ9HfRYlpQA== Completed in 1ms
+266 timing metavuln:cache:get:security-advisory:semver-regex:957iQwZ5ELsi/bs0NMaFAJC1b0F47Pu0vSBaviXTALaBg66hiH8b0nEt9AuDmPYu+qLNFUagNBMzhejfRY/rFg== Completed in 1ms
+267 timing metavuln:cache:get:security-advisory:semver-regex:cw2sZUfvrtHGt8dPa6F7+y8e+TH4E87nG33i/z9cCQLRVXz0Drbap4agcq1kT4sGW9vYF+y+4DIWvN1EsIMojg== Completed in 1ms
+268 http fetch GET 200 https://registry.npmjs.org/got 96ms (cache updated)
+269 timing metavuln:packument:got Completed in 100ms
+270 timing metavuln:load:security-advisory:got:1088948 Completed in 8ms
+271 http fetch GET 200 https://registry.npmjs.org/http-cache-semantics 109ms (cache updated)
+272 timing metavuln:packument:http-cache-semantics Completed in 109ms
+273 timing metavuln:load:security-advisory:http-cache-semantics:1091807 Completed in 1ms
+274 timing metavuln:cache:put:security-advisory:http-cache-semantics:KWSsAVfoi0wiBvJ4LX/Std13sRgj3JoT8nkHRxrhKCBoKe/X0kbLvtW6kvVtCUpKTk17kt7Iw5DVJ9HfRYlpQA== Completed in 2ms
+275 timing metavuln:calculate:security-advisory:http-cache-semantics:1091807 Completed in 113ms
+276 timing metavuln:cache:put:security-advisory:got:6RwqOtyKHRfIYfVtDkU86+jmAkm03OLYFGvOQUWcpuzfU8h8RNz3w5ZFTGeJ+8QNC0jGK3xFL9UvdqMN+kLCrg== Completed in 5ms
+277 timing metavuln:calculate:security-advisory:got:1088948 Completed in 113ms
+278 http fetch GET 200 https://registry.npmjs.org/swc/-/swc-1.0.11.tgz 1078ms (cache miss)
+279 timing reifyNode:node_modules/swc Completed in 1137ms
+280 timing reify:unpack Completed in 1137ms
+281 timing reify:unretire Completed in 1ms
+282 timing build:queue Completed in 4ms
+283 timing build:link:node_modules/bin-version-check/node_modules/semver Completed in 2ms
+284 timing build:link:node_modules/semver-truncate/node_modules/semver Completed in 2ms
+285 timing build:link:node_modules/bin-version/node_modules/semver Completed in 2ms
+286 timing build:link:node_modules/seek-bzip Completed in 2ms
+287 timing build:link:node_modules/@swc/cli Completed in 3ms
+288 timing build:link:node_modules/semver Completed in 2ms
+289 timing build:link:node_modules/which Completed in 2ms
+290 timing build:link Completed in 3ms
+291 info run @swc/core@1.3.29 postinstall node_modules/@swc/core node postinstall.js
+292 info run @swc/core@1.3.29 postinstall { code: 0, signal: null }
+293 timing build:run:postinstall:node_modules/@swc/core Completed in 54ms
+294 timing build:run:postinstall Completed in 55ms
+295 timing build:deps Completed in 62ms
+296 timing build Completed in 62ms
+297 timing reify:build Completed in 63ms
+298 timing reify:trash Completed in 1ms
+299 timing reify:save Completed in 34ms
+300 http fetch GET 200 https://registry.npmjs.org/semver-regex 734ms (cache revalidated)
+301 timing metavuln:packument:semver-regex Completed in 734ms
+302 timing metavuln:load:security-advisory:semver-regex:1089649 Completed in 0ms
+303 timing metavuln:load:security-advisory:semver-regex:1089093 Completed in 1ms
+304 timing metavuln:cache:put:security-advisory:semver-regex:957iQwZ5ELsi/bs0NMaFAJC1b0F47Pu0vSBaviXTALaBg66hiH8b0nEt9AuDmPYu+qLNFUagNBMzhejfRY/rFg== Completed in 2ms
+305 timing metavuln:calculate:security-advisory:semver-regex:1089649 Completed in 737ms
+306 timing metavuln:cache:put:security-advisory:semver-regex:cw2sZUfvrtHGt8dPa6F7+y8e+TH4E87nG33i/z9cCQLRVXz0Drbap4agcq1kT4sGW9vYF+y+4DIWvN1EsIMojg== Completed in 2ms
+307 timing metavuln:calculate:security-advisory:semver-regex:1089093 Completed in 738ms
+308 timing metavuln:cache:get:security-advisory:download:nKiTPqPWWtt6ZVvgqb8Y/yu/1j2EbKc2v8K9tCp5FBXu4CBE4286Q+8m374EBOGmL3Oy73G2nUfdvIKeMq8FmA== Completed in 1ms
+309 http fetch GET 200 https://registry.npmjs.org/download 665ms (cache updated)
+310 timing metavuln:packument:download Completed in 666ms
+311 timing metavuln:load:security-advisory:download:6RwqOtyKHRfIYfVtDkU86+jmAkm03OLYFGvOQUWcpuzfU8h8RNz3w5ZFTGeJ+8QNC0jGK3xFL9UvdqMN+kLCrg== Completed in 12ms
+312 timing metavuln:cache:put:security-advisory:download:nKiTPqPWWtt6ZVvgqb8Y/yu/1j2EbKc2v8K9tCp5FBXu4CBE4286Q+8m374EBOGmL3Oy73G2nUfdvIKeMq8FmA== Completed in 2ms
+313 timing metavuln:calculate:security-advisory:download:6RwqOtyKHRfIYfVtDkU86+jmAkm03OLYFGvOQUWcpuzfU8h8RNz3w5ZFTGeJ+8QNC0jGK3xFL9UvdqMN+kLCrg== Completed in 680ms
+314 timing metavuln:cache:get:security-advisory:cacheable-request:TSE8Hr0G9zvfuhP0z6XWX54zoPQSjuWEQaXmqHEx7lqkDNDf8xMbXoHpJPPamyP/fMWF+XjF9eGV+TUYRNz8Eg== Completed in 1ms
+315 http fetch GET 200 https://registry.npmjs.org/cacheable-request 730ms (cache updated)
+316 timing metavuln:packument:cacheable-request Completed in 732ms
+317 timing metavuln:load:security-advisory:cacheable-request:KWSsAVfoi0wiBvJ4LX/Std13sRgj3JoT8nkHRxrhKCBoKe/X0kbLvtW6kvVtCUpKTk17kt7Iw5DVJ9HfRYlpQA== Completed in 4ms
+318 timing metavuln:cache:put:security-advisory:cacheable-request:TSE8Hr0G9zvfuhP0z6XWX54zoPQSjuWEQaXmqHEx7lqkDNDf8xMbXoHpJPPamyP/fMWF+XjF9eGV+TUYRNz8Eg== Completed in 2ms
+319 timing metavuln:calculate:security-advisory:cacheable-request:KWSsAVfoi0wiBvJ4LX/Std13sRgj3JoT8nkHRxrhKCBoKe/X0kbLvtW6kvVtCUpKTk17kt7Iw5DVJ9HfRYlpQA== Completed in 739ms
+320 timing metavuln:cache:get:security-advisory:find-versions:H7IAOX5jnVz9od3oTsTfBd+IZkmvIKH4RJzQ30chmy4MeBCyMIRF0lcetwavAWxU0sY/NlbKm0GUYjwQ0zdM1A== Completed in 0ms
+321 http fetch GET 200 https://registry.npmjs.org/find-versions 40ms (cache updated)
+322 timing metavuln:packument:find-versions Completed in 40ms
+323 timing metavuln:load:security-advisory:find-versions:957iQwZ5ELsi/bs0NMaFAJC1b0F47Pu0vSBaviXTALaBg66hiH8b0nEt9AuDmPYu+qLNFUagNBMzhejfRY/rFg== Completed in 2ms
+324 timing metavuln:cache:put:security-advisory:find-versions:H7IAOX5jnVz9od3oTsTfBd+IZkmvIKH4RJzQ30chmy4MeBCyMIRF0lcetwavAWxU0sY/NlbKm0GUYjwQ0zdM1A== Completed in 2ms
+325 timing metavuln:calculate:security-advisory:find-versions:957iQwZ5ELsi/bs0NMaFAJC1b0F47Pu0vSBaviXTALaBg66hiH8b0nEt9AuDmPYu+qLNFUagNBMzhejfRY/rFg== Completed in 44ms
+326 timing metavuln:cache:get:security-advisory:bin-wrapper:N90aOKsGTX+xuZqcHgXlaD+wT0FMQEO84coz6E/lQu3X3jxwegfoIJ3h7jj9w5NSN4wAqYpTwTxeyzSOPchCBw== Completed in 1ms
+327 http fetch GET 200 https://registry.npmjs.org/bin-wrapper 46ms (cache revalidated)
+328 timing metavuln:packument:bin-wrapper Completed in 46ms
+329 timing metavuln:load:security-advisory:bin-wrapper:nKiTPqPWWtt6ZVvgqb8Y/yu/1j2EbKc2v8K9tCp5FBXu4CBE4286Q+8m374EBOGmL3Oy73G2nUfdvIKeMq8FmA== Completed in 5ms
+330 timing metavuln:cache:put:security-advisory:bin-wrapper:N90aOKsGTX+xuZqcHgXlaD+wT0FMQEO84coz6E/lQu3X3jxwegfoIJ3h7jj9w5NSN4wAqYpTwTxeyzSOPchCBw== Completed in 1ms
+331 timing metavuln:calculate:security-advisory:bin-wrapper:nKiTPqPWWtt6ZVvgqb8Y/yu/1j2EbKc2v8K9tCp5FBXu4CBE4286Q+8m374EBOGmL3Oy73G2nUfdvIKeMq8FmA== Completed in 52ms
+332 timing metavuln:cache:get:security-advisory:got:0rGXoCdIK/yAqN48oTjdyPVKgXk6ZQ+b9Yzs6ujvKDmmyewZ5CDM3FOEYnNQfqwycK0QU3jCvO4bXD59zJG8NA== Completed in 0ms
+333 timing metavuln:load:security-advisory:got:TSE8Hr0G9zvfuhP0z6XWX54zoPQSjuWEQaXmqHEx7lqkDNDf8xMbXoHpJPPamyP/fMWF+XjF9eGV+TUYRNz8Eg== Completed in 7ms
+334 timing metavuln:cache:put:security-advisory:got:0rGXoCdIK/yAqN48oTjdyPVKgXk6ZQ+b9Yzs6ujvKDmmyewZ5CDM3FOEYnNQfqwycK0QU3jCvO4bXD59zJG8NA== Completed in 1ms
+335 timing metavuln:calculate:security-advisory:got:TSE8Hr0G9zvfuhP0z6XWX54zoPQSjuWEQaXmqHEx7lqkDNDf8xMbXoHpJPPamyP/fMWF+XjF9eGV+TUYRNz8Eg== Completed in 8ms
+336 timing metavuln:cache:get:security-advisory:bin-version:ojppmwy91A3dnIOSrocYoaFdw0xhde7IbP8gGG/EWnu45c0H86Mxfs9iQS5MHL8gTgfHdUdSorPfb+V5Bbssdw== Completed in 1ms
+337 http fetch GET 200 https://registry.npmjs.org/bin-version 38ms (cache revalidated)
+338 timing metavuln:packument:bin-version Completed in 38ms
+339 timing metavuln:load:security-advisory:bin-version:H7IAOX5jnVz9od3oTsTfBd+IZkmvIKH4RJzQ30chmy4MeBCyMIRF0lcetwavAWxU0sY/NlbKm0GUYjwQ0zdM1A== Completed in 1ms
+340 timing metavuln:cache:put:security-advisory:bin-version:ojppmwy91A3dnIOSrocYoaFdw0xhde7IbP8gGG/EWnu45c0H86Mxfs9iQS5MHL8gTgfHdUdSorPfb+V5Bbssdw== Completed in 0ms
+341 timing metavuln:calculate:security-advisory:bin-version:H7IAOX5jnVz9od3oTsTfBd+IZkmvIKH4RJzQ30chmy4MeBCyMIRF0lcetwavAWxU0sY/NlbKm0GUYjwQ0zdM1A== Completed in 39ms
+342 timing metavuln:cache:get:security-advisory:@swc/cli:Wl4TIUVGuIGa/wS8kr/i35UwOwd5sL/UsPfvmMqqK8EnmiB3Ihs0LQ4eQ/gxZ4sH8rQJQ2mRKeDp2Y4yCH3M2w== Completed in 0ms
+343 http fetch GET 200 https://registry.npmjs.org/@swc%2fcli 1405ms (cache updated)
+344 timing metavuln:packument:@swc/cli Completed in 1405ms
+345 timing metavuln:load:security-advisory:@swc/cli:N90aOKsGTX+xuZqcHgXlaD+wT0FMQEO84coz6E/lQu3X3jxwegfoIJ3h7jj9w5NSN4wAqYpTwTxeyzSOPchCBw== Completed in 2ms
+346 timing metavuln:cache:put:security-advisory:@swc/cli:Wl4TIUVGuIGa/wS8kr/i35UwOwd5sL/UsPfvmMqqK8EnmiB3Ihs0LQ4eQ/gxZ4sH8rQJQ2mRKeDp2Y4yCH3M2w== Completed in 0ms
+347 timing metavuln:calculate:security-advisory:@swc/cli:N90aOKsGTX+xuZqcHgXlaD+wT0FMQEO84coz6E/lQu3X3jxwegfoIJ3h7jj9w5NSN4wAqYpTwTxeyzSOPchCBw== Completed in 1407ms
+348 timing metavuln:cache:get:security-advisory:bin-version-check:q9O/iU3bi3K6SVUu1bd1KswzXbytvI1x9s5nBr/J53jvhemK7JRyDTwq6PvT4pflbSrag0OO/en8fazK/TPt9Q== Completed in 1ms
+349 http fetch GET 200 https://registry.npmjs.org/bin-version-check 47ms (cache revalidated)
+350 timing metavuln:packument:bin-version-check Completed in 47ms
+351 timing metavuln:load:security-advisory:bin-version-check:ojppmwy91A3dnIOSrocYoaFdw0xhde7IbP8gGG/EWnu45c0H86Mxfs9iQS5MHL8gTgfHdUdSorPfb+V5Bbssdw== Completed in 0ms
+352 timing metavuln:cache:put:security-advisory:bin-version-check:q9O/iU3bi3K6SVUu1bd1KswzXbytvI1x9s5nBr/J53jvhemK7JRyDTwq6PvT4pflbSrag0OO/en8fazK/TPt9Q== Completed in 1ms
+353 timing metavuln:calculate:security-advisory:bin-version-check:ojppmwy91A3dnIOSrocYoaFdw0xhde7IbP8gGG/EWnu45c0H86Mxfs9iQS5MHL8gTgfHdUdSorPfb+V5Bbssdw== Completed in 48ms
+354 timing metavuln:packument:swc Completed in 1ms
+355 timing metavuln:cache:get:security-advisory:swc:1DphXn4RBV4piauNyNgETGAhq6R87fpvm2rJEginAf3znX0pz2279NMFqFwM03RbOqYbF2jnTpl5XBeSGiLRFA== Completed in 1ms
+356 timing metavuln:load:security-advisory:swc:Wl4TIUVGuIGa/wS8kr/i35UwOwd5sL/UsPfvmMqqK8EnmiB3Ihs0LQ4eQ/gxZ4sH8rQJQ2mRKeDp2Y4yCH3M2w== Completed in 2ms
+357 timing metavuln:cache:put:security-advisory:swc:1DphXn4RBV4piauNyNgETGAhq6R87fpvm2rJEginAf3znX0pz2279NMFqFwM03RbOqYbF2jnTpl5XBeSGiLRFA== Completed in 1ms
+358 timing metavuln:calculate:security-advisory:swc:Wl4TIUVGuIGa/wS8kr/i35UwOwd5sL/UsPfvmMqqK8EnmiB3Ihs0LQ4eQ/gxZ4sH8rQJQ2mRKeDp2Y4yCH3M2w== Completed in 4ms
+359 timing metavuln:cache:get:security-advisory:bin-wrapper:brXLZhNAd90MwiSUzpD5KCpmk3DwlbEyocyKW9r7qjzz4uEj/HGt+sPkqZWu/wvHsedeHivLm30/oIwbGLL/0w== Completed in 0ms
+360 timing metavuln:load:security-advisory:bin-wrapper:q9O/iU3bi3K6SVUu1bd1KswzXbytvI1x9s5nBr/J53jvhemK7JRyDTwq6PvT4pflbSrag0OO/en8fazK/TPt9Q== Completed in 1ms
+361 timing metavuln:cache:put:security-advisory:bin-wrapper:brXLZhNAd90MwiSUzpD5KCpmk3DwlbEyocyKW9r7qjzz4uEj/HGt+sPkqZWu/wvHsedeHivLm30/oIwbGLL/0w== Completed in 1ms
+362 timing metavuln:calculate:security-advisory:bin-wrapper:q9O/iU3bi3K6SVUu1bd1KswzXbytvI1x9s5nBr/J53jvhemK7JRyDTwq6PvT4pflbSrag0OO/en8fazK/TPt9Q== Completed in 2ms
+363 timing auditReport:init Completed in 3767ms
+364 timing reify:audit Completed in 4338ms
+365 timing reify Completed in 4433ms
+366 silly ADD node_modules/swc
+367 silly ADD node_modules/yauzl
+368 silly ADD node_modules/yallist
+369 silly ADD node_modules/xtend
+370 silly ADD node_modules/wrappy
+371 silly ADD node_modules/which
+372 silly ADD node_modules/util-deprecate
+373 silly ADD node_modules/url-to-options
+374 silly ADD node_modules/url-parse-lax
+375 silly ADD node_modules/unbzip2-stream
+376 silly ADD node_modules/tunnel-agent
+377 silly ADD node_modules/trim-repeated
+378 silly ADD node_modules/to-regex-range
+379 silly ADD node_modules/to-buffer
+380 silly ADD node_modules/timed-out
+381 silly ADD node_modules/through
+382 silly ADD node_modules/tar-stream
+383 silly ADD node_modules/strip-outer
+384 silly ADD node_modules/strip-eof
+385 silly ADD node_modules/strip-dirs
+386 silly ADD node_modules/string_decoder
+387 silly ADD node_modules/string_decoder/node_modules/safe-buffer
+388 silly ADD node_modules/strict-uri-encode
+389 silly ADD node_modules/source-map
+390 silly ADD node_modules/sort-keys-length
+391 silly ADD node_modules/sort-keys-length/node_modules/sort-keys
+392 silly ADD node_modules/sort-keys
+393 silly ADD node_modules/slash
+394 silly ADD node_modules/signal-exit
+395 silly ADD node_modules/shebang-regex
+396 silly ADD node_modules/shebang-command
+397 silly ADD node_modules/semver-truncate
+398 silly ADD node_modules/semver-truncate/node_modules/semver
+399 silly ADD node_modules/semver-regex
+400 silly ADD node_modules/semver
+401 silly ADD node_modules/semver/node_modules/yallist
+402 silly ADD node_modules/semver/node_modules/lru-cache
+403 silly ADD node_modules/seek-bzip
+404 silly ADD node_modules/seek-bzip/node_modules/commander
+405 silly ADD node_modules/safe-buffer
+406 silly ADD node_modules/run-parallel
+407 silly ADD node_modules/reusify
+408 silly ADD node_modules/responselike
+409 silly ADD node_modules/readdirp
+410 silly ADD node_modules/readable-stream
+411 silly ADD node_modules/readable-stream/node_modules/safe-buffer
+412 silly ADD node_modules/queue-microtask
+413 silly ADD node_modules/query-string
+414 silly ADD node_modules/pump
+415 silly ADD node_modules/pseudomap
+416 silly ADD node_modules/proto-list
+417 silly ADD node_modules/process-nextick-args
+418 silly ADD node_modules/prepend-http
+419 silly ADD node_modules/pinkie-promise
+420 silly ADD node_modules/pinkie
+421 silly ADD node_modules/pify
+422 silly ADD node_modules/picomatch
+423 silly ADD node_modules/pend
+424 silly ADD node_modules/path-key
+425 silly ADD node_modules/p-timeout
+426 silly ADD node_modules/p-is-promise
+427 silly ADD node_modules/p-finally
+428 silly ADD node_modules/p-event
+429 silly ADD node_modules/p-cancelable
+430 silly ADD node_modules/os-filter-obj
+431 silly ADD node_modules/once
+432 silly ADD node_modules/object-assign
+433 silly ADD node_modules/npm-run-path
+434 silly ADD node_modules/npm-conf
+435 silly ADD node_modules/npm-conf/node_modules/pify
+436 silly ADD node_modules/normalize-url
+437 silly ADD node_modules/normalize-path
+438 silly ADD node_modules/nice-try
+439 silly ADD node_modules/mimic-response
+440 silly ADD node_modules/mime-db
+441 silly ADD node_modules/micromatch
+442 silly ADD node_modules/merge2
+443 silly ADD node_modules/make-dir
+444 silly ADD node_modules/make-dir/node_modules/pify
+445 silly ADD node_modules/lru-cache
+446 silly ADD node_modules/lowercase-keys
+447 silly ADD node_modules/keyv
+448 silly ADD node_modules/json-buffer
+449 silly ADD node_modules/isurl
+450 silly ADD node_modules/isexe
+451 silly ADD node_modules/isarray
+452 silly ADD node_modules/is-stream
+453 silly ADD node_modules/is-retry-allowed
+454 silly ADD node_modules/is-plain-obj
+455 silly ADD node_modules/is-object
+456 silly ADD node_modules/is-number
+457 silly ADD node_modules/is-natural-number
+458 silly ADD node_modules/is-glob
+459 silly ADD node_modules/is-extglob
+460 silly ADD node_modules/is-binary-path
+461 silly ADD node_modules/into-stream
+462 silly ADD node_modules/ini
+463 silly ADD node_modules/inherits
+464 silly ADD node_modules/import-lazy
+465 silly ADD node_modules/ieee754
+466 silly ADD node_modules/http-cache-semantics
+467 silly ADD node_modules/has-to-string-tag-x
+468 silly ADD node_modules/has-symbol-support-x
+469 silly ADD node_modules/graceful-fs
+470 silly ADD node_modules/got
+471 silly ADD node_modules/got/node_modules/pify
+472 silly ADD node_modules/glob-parent
+473 silly ADD node_modules/get-stream
+474 silly ADD node_modules/get-proxy
+475 silly ADD
+476 silly ADD node_modules/fs-constants
+477 silly ADD node_modules/from2
+478 silly ADD node_modules/find-versions
+479 silly ADD node_modules/fill-range
+480 silly ADD node_modules/filenamify
+481 silly ADD node_modules/filename-reserved-regex
+482 silly ADD node_modules/file-type
+483 silly ADD node_modules/fd-slicer
+484 silly ADD node_modules/fastq
+485 silly ADD node_modules/fast-glob
+486 silly ADD node_modules/ext-name
+487 silly ADD node_modules/ext-list
+488 silly ADD node_modules/executable
+489 silly ADD node_modules/executable/node_modules/pify
+490 silly ADD node_modules/execa
+491 silly ADD node_modules/escape-string-regexp
+492 silly ADD node_modules/end-of-stream
+493 silly ADD node_modules/duplexer3
+494 silly ADD node_modules/download
+495 silly ADD node_modules/download/node_modules/pify
+496 silly ADD node_modules/decompress-unzip
+497 silly ADD node_modules/decompress-unzip/node_modules/pify
+498 silly ADD node_modules/decompress-unzip/node_modules/get-stream
+499 silly ADD node_modules/decompress-unzip/node_modules/file-type
+500 silly ADD node_modules/decompress-targz
+501 silly ADD node_modules/decompress-targz/node_modules/file-type
+502 silly ADD node_modules/decompress-tarbz2
+503 silly ADD node_modules/decompress-tarbz2/node_modules/file-type
+504 silly ADD node_modules/decompress-tar
+505 silly ADD node_modules/decompress-tar/node_modules/file-type
+506 silly ADD node_modules/decompress-response
+507 silly ADD node_modules/decompress
+508 silly ADD node_modules/decompress/node_modules/pify
+509 silly ADD node_modules/decode-uri-component
+510 silly ADD node_modules/cross-spawn
+511 silly ADD node_modules/core-util-is
+512 silly ADD node_modules/content-disposition
+513 silly ADD node_modules/config-chain
+514 silly ADD node_modules/commander
+515 silly ADD node_modules/clone-response
+516 silly ADD node_modules/chokidar
+517 silly ADD node_modules/caw
+518 silly ADD node_modules/cacheable-request
+519 silly ADD node_modules/cacheable-request/node_modules/lowercase-keys
+520 silly ADD node_modules/buffer-fill
+521 silly ADD node_modules/buffer-crc32
+522 silly ADD node_modules/buffer-alloc-unsafe
+523 silly ADD node_modules/buffer-alloc
+524 silly ADD node_modules/buffer
+525 silly ADD node_modules/braces
+526 silly ADD node_modules/bl
+527 silly ADD node_modules/binary-extensions
+528 silly ADD node_modules/bin-wrapper
+529 silly ADD node_modules/bin-version-check
+530 silly ADD node_modules/bin-version-check/node_modules/semver
+531 silly ADD node_modules/bin-version
+532 silly ADD node_modules/bin-version/node_modules/semver
+533 silly ADD node_modules/bin-version/node_modules/get-stream
+534 silly ADD node_modules/bin-version/node_modules/execa
+535 silly ADD node_modules/bin-version/node_modules/cross-spawn
+536 silly ADD node_modules/bin-check
+537 silly ADD node_modules/base64-js
+538 silly ADD node_modules/archive-type
+539 silly ADD node_modules/archive-type/node_modules/file-type
+540 silly ADD node_modules/arch
+541 silly ADD node_modules/anymatch
+542 silly ADD
+543 silly ADD
+544 silly ADD
+545 silly ADD node_modules/@swc/core-linux-x64-musl
+546 silly ADD node_modules/@swc/core-linux-x64-gnu
+547 silly ADD
+548 silly ADD
+549 silly ADD
+550 silly ADD
+551 silly ADD
+552 silly ADD node_modules/@swc/core
+553 silly ADD node_modules/@swc/cli
+554 silly ADD node_modules/@sindresorhus/is
+555 silly ADD node_modules/@nodelib/fs.walk
+556 silly ADD node_modules/@nodelib/fs.stat
+557 silly ADD node_modules/@nodelib/fs.scandir
+558 timing command:install Completed in 4444ms
+559 verbose exit 0
+560 timing npm Completed in 4461ms
+561 info ok

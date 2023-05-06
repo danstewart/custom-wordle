@@ -1,0 +1,53 @@
+0 verbose cli /home/dan/.cache/hermit/pkg/node@18/bin/node /home/dan/Code/custom-wordle/.hermit/node/bin/npm
+1 info using npm@9.4.0
+2 info using node@v18.13.0
+3 timing npm:load:whichnode Completed in 1ms
+4 timing config:load:defaults Completed in 0ms
+5 timing config:load:file:/home/dan/Code/custom-wordle/.hermit/node/lib/node_modules/npm/npmrc Completed in 0ms
+6 timing config:load:builtin Completed in 1ms
+7 timing config:load:cli Completed in 1ms
+8 timing config:load:env Completed in 0ms
+9 timing config:load:file:/home/dan/Code/custom-wordle/.npmrc Completed in 0ms
+10 timing config:load:project Completed in 0ms
+11 timing config:load:file:/home/dan/.npmrc Completed in 0ms
+12 timing config:load:user Completed in 1ms
+13 timing config:load:file:/home/dan/Code/custom-wordle/.hermit/node/etc/npmrc Completed in 0ms
+14 timing config:load:global Completed in 0ms
+15 timing config:load:setEnvs Completed in 0ms
+16 timing config:load Completed in 3ms
+17 timing npm:load:configload Completed in 3ms
+18 timing npm:load:mkdirpcache Completed in 0ms
+19 timing npm:load:mkdirplogs Completed in 0ms
+20 verbose title npm run swc
+21 verbose argv "run" "swc"
+22 timing npm:load:setTitle Completed in 1ms
+23 timing config:load:flatten Completed in 2ms
+24 timing npm:load:display Completed in 2ms
+25 verbose logfile logs-max:10 dir:/home/dan/Code/custom-wordle/.hermit/node/cache/_logs/2023-05-06T11_43_36_220Z-
+26 verbose logfile /home/dan/Code/custom-wordle/.hermit/node/cache/_logs/2023-05-06T11_43_36_220Z-debug-0.log
+27 timing npm:load:logFile Completed in 2ms
+28 timing npm:load:timers Completed in 0ms
+29 timing npm:load:configScope Completed in 0ms
+30 timing npm:load Completed in 9ms
+31 silly logfile start cleaning logs, removing 1 files
+32 silly logfile done cleaning log files
+33 timing command:run Completed in 3ms
+34 verbose stack Error: Missing script: "swc"
+34 verbose stack
+34 verbose stack To see a list of scripts, run:
+34 verbose stack   npm run
+34 verbose stack     at RunScript.run (/home/dan/Code/custom-wordle/.hermit/node/lib/node_modules/npm/lib/commands/run-script.js:99:13)
+34 verbose stack     at async module.exports (/home/dan/Code/custom-wordle/.hermit/node/lib/node_modules/npm/lib/cli.js:134:5)
+35 verbose cwd /home/dan/Code/custom-wordle
+36 verbose Linux 6.2.14-300.fc38.x86_64
+37 verbose node v18.13.0
+38 verbose npm  v9.4.0
+39 error Missing script: "swc"
+39 error
+39 error To see a list of scripts, run:
+39 error   npm run
+40 verbose exit 1
+41 timing npm Completed in 20ms
+42 verbose code 1
+43 error A complete log of this run can be found in:
+43 error     /home/dan/Code/custom-wordle/.hermit/node/cache/_logs/2023-05-06T11_43_36_220Z-debug-0.log
