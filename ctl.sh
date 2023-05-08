@@ -24,6 +24,7 @@ if [[ $help == 1 ]] || [[ $serve == 1 && $build == 1 ]] || [[ $serve == 0 && $bu
     echo "--serve:  Serve the app for local development on http://localhost:8000"
     echo "          JavaScript will be live transpiled"
     echo "--build:  Build the app for production"
+    echo "--deploy: Build and deploy to production"
     echo "--help:   Show this help text"
     exit 0
 fi
@@ -44,5 +45,5 @@ if [[ $build == 1 ]]; then
 fi
 
 if [[ $deploy == 1 ]]; then
-    scp -r src/* 192.168.4.72:/data/www/wordle.danstewart.xyz/
+    scp -r src/* nginx:/data/www/wordle.danstewart.xyz/
 fi
