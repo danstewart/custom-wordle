@@ -10,7 +10,7 @@ while [[ "$#" -gt 0 ]]; do
 	case "$1" in
 		--serve) serve=1 ;;
 		--build) build=1 ;;
-        --deploy) build=1; deploy=1 ;;
+		--deploy) build=1; deploy=1 ;;
 		-h|--help) help=1 ;;
 		--) shift; break ;;
 	esac
@@ -45,5 +45,5 @@ if [[ $build == 1 ]]; then
 fi
 
 if [[ $deploy == 1 ]]; then
-    scp -r src/* nginx:/data/www/wordle.danstewart.xyz/
+    scp -r src/* web:/var/www/wordle.danstewart.xyz
 fi
